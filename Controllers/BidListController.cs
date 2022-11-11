@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Dot.Net.WebApi.Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
- 
+using WebApi3.Domain;
+
 namespace Dot.Net.WebApi.Controllers
 {
     [Route("[controller]")]

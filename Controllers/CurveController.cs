@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApi3.Domain;
+using WebApi3.Validators;
 
 namespace Dot.Net.WebApi.Controllers
 {
@@ -15,14 +16,20 @@ namespace Dot.Net.WebApi.Controllers
         }
 
         /// <summary>
-        /// Method to add a curvePoint
+        /// Method to add a curvePoint if the data is valid
         /// </summary>
         /// <param name="curvePoint"></param>
         /// <returns></returns>
         [HttpPost("/curvePoint/add")]
         public IActionResult AddCurvePoint([FromBody]CurvePoint curvePoint)
         {
-            return Ok();
+            var validator = new CurvePointValidator();
+            var result = validator.Validate(curvePoint);
+            if (result.IsValid)
+            {
+                return Ok();
+            }
+            return BadRequest(result.Errors);
         }
 
         [HttpGet("/curvePoint/add")]

@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Dot.Net.WebApi.Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
- 
+using WebApi3.Domain;
+
 namespace Dot.Net.WebApi.Controllers
 {
     [Route("[controller]")]
@@ -19,10 +14,15 @@ namespace Dot.Net.WebApi.Controllers
             return View("curvePoint/list");
         }
 
-        [HttpGet("/curvePoint/add")]
+        /// <summary>
+        /// Method to add a curvePoint
+        /// </summary>
+        /// <param name="curvePoint"></param>
+        /// <returns></returns>
+        [HttpPost("/curvePoint/add")]
         public IActionResult AddCurvePoint([FromBody]CurvePoint curvePoint)
         {
-            return View("curvePoint/add");
+            return Ok();
         }
 
         [HttpGet("/curvePoint/add")]

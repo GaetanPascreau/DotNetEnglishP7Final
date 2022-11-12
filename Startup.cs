@@ -29,8 +29,10 @@ namespace Dot.Net.WebApi
             {
                 options.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
+            //THE previous method is deprecated => use the following methods instead + find how to configure options inside
+            //services.AddFluentValidationAutoValidation();
+            //services.AddFluentValidationClientsideAdapters();
         }
-    
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

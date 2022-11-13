@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
-using WebApi3.Domain;
+using WebApi3.Domain.DTO;
 
 namespace WebApi3.Validators
 {
-    public class CurvePointValidator : AbstractValidator<CurvePoint>
+    public class CurvePointValidator : AbstractValidator<CurvePointDTO>
     {
         public CurvePointValidator()
         {

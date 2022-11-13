@@ -1,10 +1,14 @@
+using Dot.Net.WebApi.Data;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebApi3;
+using WebApi3.Repositories;
+using WebApi3.Services;
 
 namespace Dot.Net.WebApi
 {
@@ -32,6 +36,12 @@ namespace Dot.Net.WebApi
             //THE previous method is deprecated => use the following methods instead + find how to configure options inside
             //services.AddFluentValidationAutoValidation();
             //services.AddFluentValidationClientsideAdapters();
+
+            //Add services for CurvePointRepository, CurvePointService and LocalBdContext
+            services.AddScoped<ICurvePointRepository, CurvePointRepository>();
+            services.AddScoped<ICurvePointService, CurvePointService>();
+            services.AddDbContext<LocalDbContext>(options =>
+                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

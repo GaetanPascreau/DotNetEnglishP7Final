@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
+using WebApi3.Validators;
 
 namespace WebApi3.Services
 {
@@ -15,28 +16,28 @@ namespace WebApi3.Services
         }
 
         /// <summary>
-        /// Method that calls the GetCurvePoint() method from CurvePointRepository 
+        /// Method that calls the GetAllCurvePoints() method from CurvePointRepository 
         /// </summary>
         /// <returns></returns>
-        public async Task<IEnumerable<CurvePointDTO>> GetCurvePoint()
+        public async Task<List<CurvePointDTO>> GetAllCurvePoints()
         {
-            var curvePointsDTO = await _curvePointRepository.GetCurvePoint();
+            var curvePointsDTO = await _curvePointRepository.GetAllCurvePoints();
             return curvePointsDTO;
         }
 
         /// <summary>
-        /// Method that calls the GetCurvePointById() method from CurvePointRepository
+        /// Method that calls the GetSingleCurvePoint() method from CurvePointRepository
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<CurvePointDTO> GetCurvePointById(int id)
+        public async Task<CurvePointDTO> GetSingleCurvePoint(int id)
         {
             //ADD validation here => check that the id exists ? or use annotations?
             if (id == 0)
             {
-                //use modelErrors like in P3AddNewFunctionalityDotNetCore/ProductService.cs
+                return null;
             }
-            var curvePointDTO = await _curvePointRepository.GetCurvePointById(id);
+            var curvePointDTO = await _curvePointRepository.GetSingleCurvePoint(id);
             return curvePointDTO;
         }
 
@@ -44,23 +45,18 @@ namespace WebApi3.Services
         /// Methods that checks if passed data is valid, then calls the CreateCurvePoint() method from CurvePointRepository
         /// </summary>
         /// <param name="curvePointDTO"></param>
-        public bool CreateCurvePoint(CurvePointDTO curvePointDTOtoCreate)
+        public Task<List<CurvePointDTO>> CreateCurvePoint(CurvePointDTO curvePointDTOtoCreate)
         {
-            // Validation logic
-            //if (!ValidateCurvePoint(curvePointDTOtoCreate))
-            //{
-            //    return false;
-            //}
-            // Database logic
-            try
+            var validator = new CurvePointValidator();
+            var result = validator.Validate(curvePointDTOtoCreate);
+
+            if (!result.IsValid)
             {
-                _curvePointRepository.CreateCurvePoint(curvePointDTOtoCreate);
+                return null;
             }
-            catch
-            {
-                return false;
-            }
-            return true;
+
+            var curvePointDTOsAfterAddition = _curvePointRepository.CreateCurvePoint(curvePointDTOtoCreate);
+            return curvePointDTOsAfterAddition;
         }
 
         /// <summary>
@@ -69,7 +65,7 @@ namespace WebApi3.Services
         /// <param name="Id"></param>
         /// <param name="curvePointDTOtoUpdate"></param>
         /// <returns></returns>
-        public bool UpdateCurvePoint(int Id, CurvePointDTO curvePointDTOtoUpdate)
+        public Task<List<CurvePointDTO>> UpdateCurvePoint(int id, CurvePointDTO curvePointDTOtoUpdate)
         {
             // Validation logic
             //if (!ValidateCurvePoint(curvePointDTOtoUpdate))
@@ -77,34 +73,28 @@ namespace WebApi3.Services
             //    return false;
             //}
             // Database logic
-            try
+            if (id == 0 || curvePointDTOtoUpdate == null)
             {
-                _curvePointRepository.UpdateCurvePoint(Id, curvePointDTOtoUpdate);
+                return null;
             }
-            catch
-            {
-                return false;
-            }
-            return true;
+
+            var curvePointDTOsAfterDeletion = _curvePointRepository.UpdateCurvePoint(id, curvePointDTOtoUpdate);
+            return curvePointDTOsAfterDeletion;
         }
 
         /// <summary>
         /// Method that calls the DeleteCurvePoint() method from CurvePointRepository 
         /// </summary>
         /// <returns></returns>
-        public void DeleteCurvePoint(int Id)
+        public Task<List<CurvePointDTO>> DeleteCurvePoint(int id)
         {
-            _curvePointRepository.DeleteCurvePoint(Id);
-        }
-    }
+            if (id == 0)
+            {
+                return null;
+            }
 
-    public interface ICurvePointService
-    {
-        Task<IEnumerable<CurvePointDTO>> GetCurvePoint();
-        Task<CurvePointDTO> GetCurvePointById(int id);
-        bool CreateCurvePoint(CurvePointDTO curvePointDTOtoCreate);
-        bool UpdateCurvePoint(int Id, CurvePointDTO curvePointDTOtoUpdate);
-        void DeleteCurvePoint(int Id);
-        //bool ValidateCurvePoint(CurvePointDTO curvePointToValidate);
+            var curvePointDTOsAfterDeletion = _curvePointRepository.DeleteCurvePoint(id);
+            return curvePointDTOsAfterDeletion;
+        }
     }
 }

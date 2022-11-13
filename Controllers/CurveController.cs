@@ -1,9 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApi3.Domain;
 using WebApi3.Domain.DTO;
 using WebApi3.Services;
-using WebApi3.Validators;
 
 namespace Dot.Net.WebApi.Controllers
 {
@@ -23,10 +21,9 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Home()
         {
-            var curvePoints = _curvePointService.GetCurvePoint();
-            //if (curvePoints is empty )
-            //{ return NotFound(); }
-            return Ok(curvePoints.Result);
+            var result = _curvePointService.GetAllCurvePoints();
+            return Ok(result.Result);
+            //or just : return _curvePointService.GetAllCurvePoints();
         }
 
         [HttpGet("/curvePoint/{id}")]
@@ -34,12 +31,13 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificCurvePoint(int id)
         {
-            if (id == 0)
+            var result = _curvePointService.GetSingleCurvePoint(id);
+            if (result == null)
             {
-                return NotFound();
+                return NotFound("CurvePoint not found.");
             }
-            var curvePoint = _curvePointService.GetCurvePointById(id);
-            return Ok(curvePoint.Result);
+            
+            return Ok(result.Result);
         }
 
         /// <summary>
@@ -48,15 +46,16 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="curvePoint"></param>
         /// <returns></returns>
         [HttpPost("/curvePoint/add")]
-        public IActionResult AddCurvePoint([FromBody]CurvePoint curvePoint)
+        public IActionResult AddCurvePoint([FromBody]CurvePointDTO curvePointDTO)
         {
-            var validator = new CurvePointValidator();
-            var result = validator.Validate(curvePoint);
-            if (result.IsValid)
+            // if the curvePoint wasn't validated by the service, return a Bad Request error
+            var result = _curvePointService.CreateCurvePoint(curvePointDTO);
+            if (result is null)
             {
-                return Ok();
+                // do we return a specific message coming from the validation step???
+                return BadRequest();
             }
-            return BadRequest(result.Errors);
+            return Ok(result.Result);
         }
 
         [HttpPut("/curvePoint/update/{id}")]
@@ -64,24 +63,36 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult UpdateCurvePoint(int Id, CurvePointDTO curvePointDTO)
         {
-            if (!_curvePointService.UpdateCurvePoint(Id, curvePointDTO))
+            var result = _curvePointService.UpdateCurvePoint(Id, curvePointDTO);
+            if (result is null)
             {
-                return BadRequest();
+                return BadRequest(); 
+                // or return a status 404 Not Fond => return NotFound("CurvePoint was not found.");
             }
-            return NoContent();
+                return NoContent();
+            // or return a status 200 Ok => return Ok(result); ???
+            
         }
 
+        //[HttpDelete("{id}")]
+        //public async Task<ActionResult<List<CurvePoint>>> DeleteCurvePoint(int id)
+        //{
+        //    var result = _curvePointService.DeleteCurvePoint(id);
+        //    if (result is null)
+        //        return NotFound("CurvePoint not found.");
+        //    return Ok(result);
+        //}
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteCurvePoint(int Id)
         {
-            if (Id == 0)
+            var result = _curvePointService.DeleteCurvePoint(Id);
+            if (result == null)
             {
-                return NotFound();
+                return NotFound("CurvePoint not found.");
             }
-            _curvePointService.DeleteCurvePoint(Id);
-            return Ok();
+            return Ok(result.Result);
         }
 
         //[HttpGet("/curvePoint/add")]

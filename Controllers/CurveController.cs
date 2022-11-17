@@ -42,9 +42,9 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult GetSpecificCurvePoint(int id)
         {
             var result = _curvePointService.GetSingleCurvePoint(id);
-            if (result == null)
+            if (result.Result == null)
             {
-                return NotFound("CurvePoint not found.");
+                return NotFound("CurvePoint not found. Enter an existing Id.");
             }
             
             return Ok(result.Result);

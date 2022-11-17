@@ -21,12 +21,12 @@ namespace Dot.Net.WebApi.Controllers
             return View("rating/add");
         }
 
-        [HttpGet("/rating/add")]
-        public IActionResult Validate([FromBody]Rating rating)
-        {
-            // TODO: check data valid and save to db, after saving return Rating list
-            return View("rating/add");
-        }
+        //[HttpGet("/rating/add")]
+        //public IActionResult Validate([FromBody]Rating rating)
+        //{
+        //    // TODO: check data valid and save to db, after saving return Rating list
+        //    return View("rating/add");
+        //}
 
         [HttpGet("/rating/update/{id}")]
         public IActionResult ShowUpdateForm(int id)
@@ -35,12 +35,12 @@ namespace Dot.Net.WebApi.Controllers
             return View("rating/update");
         }
 
-        [HttpPost("/rating/update/{id}")]
-        public IActionResult updateRating(int id, [FromBody] Rating rating)
-        {
-            // TODO: check required fields, if valid call service to update Rating and return Rating list
-            return Redirect("/rating/list");
-        }
+        //[HttpPost("/rating/update/{id}")]
+        //public IActionResult updateRating(int id, [FromBody] Rating rating)
+        //{
+        //    // TODO: check required fields, if valid call service to update Rating and return Rating list
+        //    return Redirect("/rating/list");
+        //}
 
         [HttpDelete("/rating/{id}")]
         public IActionResult DeleteRating(int id)

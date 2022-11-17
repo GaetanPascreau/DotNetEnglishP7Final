@@ -21,12 +21,12 @@ namespace Dot.Net.WebApi.Controllers
             return View("ruleName/add");
         }
 
-        [HttpGet("/ruleName/add")]
-        public IActionResult Validate([FromBody]RuleName trade)
-        {
-            // TODO: check data valid and save to db, after saving return RuleName list
-            return View("ruleName/add");
-        }
+        //[HttpGet("/ruleName/add")]
+        //public IActionResult Validate([FromBody]RuleName trade)
+        //{
+        //    // TODO: check data valid and save to db, after saving return RuleName list
+        //    return View("ruleName/add");
+        //}
 
         [HttpGet("/ruleName/update/{id}")]
         public IActionResult ShowUpdateForm(int id)
@@ -35,12 +35,12 @@ namespace Dot.Net.WebApi.Controllers
             return View("ruleName/update");
         }
 
-        [HttpPost("/ruleName/update/{id}")]
-        public IActionResult updateRuleName(int id, [FromBody] RuleName rating)
-        {
-            // TODO: check required fields, if valid call service to update RuleName and return RuleName list
-            return Redirect("/ruleName/list");
-        }
+        //[HttpPost("/ruleName/update/{id}")]
+        //public IActionResult updateRuleName(int id, [FromBody] RuleName rating)
+        //{
+        //    // TODO: check required fields, if valid call service to update RuleName and return RuleName list
+        //    return Redirect("/ruleName/list");
+        //}
 
         [HttpDelete("/ruleName/{id}")]
         public IActionResult DeleteRuleName(int id)

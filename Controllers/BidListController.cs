@@ -6,11 +6,11 @@ namespace Dot.Net.WebApi.Controllers
     [Route("[controller]")]
     public class BidListController : Controller
     {
-        [HttpGet("/")]
-        public IActionResult Home()
-        {
-            return View("Home");
-        }
+        //[HttpGet("/")]
+        //public IActionResult Home()
+        //{
+        //    return View("Home");
+        //}
 
         [HttpGet("/bidList/validate")]
         public IActionResult Validate([FromBody]BidList bidList)

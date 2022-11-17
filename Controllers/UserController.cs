@@ -51,12 +51,12 @@ namespace Dot.Net.WebApi.Controllers
             return View("user/update");
         }
 
-        [HttpPost("/user/update/{id}")]
-        public IActionResult updateUser(int id, [FromBody] User user)
-        {
-            // TODO: check required fields, if valid call service to update Trade and return Trade list
-            return Redirect("/trade/list");
-        }
+        //[HttpPost("/user/update/{id}")]
+        //public IActionResult updateUser(int id, [FromBody] User user)
+        //{
+        //    // TODO: check required fields, if valid call service to update Trade and return Trade list
+        //    return Redirect("/trade/list");
+        //}
 
         [HttpDelete("/user/{id}")]
         public IActionResult DeleteUser(int id)

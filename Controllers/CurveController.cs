@@ -1,10 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.IO;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
-using WebApi3.Services;
 
 namespace Dot.Net.WebApi.Controllers
 {
@@ -29,16 +26,6 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult Home()
         {
             var result = _curvePointService.GetAllCurvePoints();
-
-            using (StreamWriter w = System.IO.File.AppendText("log.txt"))
-            {
-                Log("User requested the BidList", w);
-            }
-
-            using (StreamReader r = System.IO.File.OpenText("log.txt"))
-            {
-                DumpLog(r);
-            }
 
             return Ok(result.Result);
             //or just : return _curvePointService.GetAllCurvePoints();
@@ -124,24 +111,6 @@ namespace Dot.Net.WebApi.Controllers
                 return NotFound("CurvePoint not found.");
             }
             return Ok(result.Result);
-        }
-
-        public static void Log(string logMessage, TextWriter w)
-        {
-            w.Write("\r\nLog Entry : ");
-            w.WriteLine($"{DateTime.Now.ToLongTimeString()} {DateTime.Now.ToLongDateString()}");
-            w.WriteLine("  :");
-            w.WriteLine($"  :{logMessage}");
-            w.WriteLine("-------------------------------");
-        }
-
-        public static void DumpLog(StreamReader r)
-        {
-            string line;
-            while ((line = r.ReadLine()) != null)
-            {
-                Console.WriteLine(line);
-            }
         }
 
 

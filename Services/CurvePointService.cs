@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
@@ -6,7 +7,7 @@ using WebApi3.Validators;
 
 namespace WebApi3.Services
 {
-    public class CurvePointService : ICurvePointService
+    public class CurvePointService  : ICurvePointRepository
     {
         private readonly ICurvePointRepository _curvePointRepository;
 
@@ -59,6 +60,21 @@ namespace WebApi3.Services
             return curvePointDTOsAfterAddition;
         }
 
+        //public IActionResult CreateCurvePoint(CurvePointDTO curvePointDTOtoCreate)
+        //{
+        //    var validator = new CurvePointValidator();
+        //    var result = validator.Validate(curvePointDTOtoCreate);
+
+        //    if (!result.IsValid)
+        //    {
+        //        return BadRequest(result.Errors);
+        //    }
+
+        //    var curvePointDTOsAfterAddition = _curvePointRepository.CreateCurvePoint(curvePointDTOtoCreate);
+        //    return Ok();
+        //}
+
+
         /// <summary>
         /// Methods that checks if passed data is valid, then calls the UpdateCurvePoint() method from CurvePointRepository
         /// </summary>
@@ -67,19 +83,23 @@ namespace WebApi3.Services
         /// <returns></returns>
         public Task<List<CurvePointDTO>> UpdateCurvePoint(int id, CurvePointDTO curvePointDTOtoUpdate)
         {
-            // Validation logic
-            //if (!ValidateCurvePoint(curvePointDTOtoUpdate))
+            //if (id == 0 || curvePointDTOtoUpdate == null)
             //{
-            //    return false;
+            //    return null;
             //}
-            // Database logic
-            if (id == 0 || curvePointDTOtoUpdate == null)
+
+            //var curvePointDTOsAfterUpdate = _curvePointRepository.UpdateCurvePoint(id, curvePointDTOtoUpdate);
+            //return curvePointDTOsAfterUpdate;
+            var validator = new CurvePointValidator();
+            var result = validator.Validate(curvePointDTOtoUpdate);
+
+            if (!result.IsValid || id == 0 || curvePointDTOtoUpdate == null)
             {
                 return null;
             }
 
-            var curvePointDTOsAfterDeletion = _curvePointRepository.UpdateCurvePoint(id, curvePointDTOtoUpdate);
-            return curvePointDTOsAfterDeletion;
+            var curvePointDTOsAfterAddition = _curvePointRepository.UpdateCurvePoint(id, curvePointDTOtoUpdate);
+            return curvePointDTOsAfterAddition;
         }
 
         /// <summary>

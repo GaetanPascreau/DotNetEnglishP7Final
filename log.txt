@@ -1,0 +1,35 @@
+﻿
+Log Entry : 12:50:36 jeudi 17 novembre 2022
+  :
+  :User requested the BidList
+-------------------------------
+
+Log Entry : 14:37:12 jeudi 17 novembre 2022
+  :
+  :User requested the BidList
+-------------------------------
+
+Log Entry : 14:37:22 jeudi 17 novembre 2022
+  :
+  :User requested the BidList
+-------------------------------
+
+Log Entry : 15:43:29 jeudi 17 novembre 2022
+  :
+  :User requested the BidList
+-------------------------------
+
+Log Entry : 15:44:47 jeudi 17 novembre 2022
+  :
+  :User requested the BidList
+-------------------------------
+
+Log Entry : 15:46:30 jeudi 17 novembre 2022
+  :
+  :User requested the BidList
+-------------------------------
+
+Log Entry : 15:47:22 jeudi 17 novembre 2022
+  :
+  :User requested the BidList
+-------------------------------

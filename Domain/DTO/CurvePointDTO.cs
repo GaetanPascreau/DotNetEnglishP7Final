@@ -1,7 +1,11 @@
-﻿using System;
+﻿using ServiceStack.FluentValidation.Attributes;
+using System;
+using System.ComponentModel.DataAnnotations;
+using WebApi3.Validators;
 
 namespace WebApi3.Domain.DTO
 {
+    //[Validator(typeof(CurvePointValidator))]
     public class CurvePointDTO
     {
         public int Id { get; set; }

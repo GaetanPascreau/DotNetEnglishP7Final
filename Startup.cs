@@ -36,10 +36,10 @@ namespace Dot.Net.WebApi
             //THE previous method is deprecated => use the following methods instead + find how to configure options inside
             //services.AddFluentValidationAutoValidation();
             //services.AddFluentValidationClientsideAdapters();
+            //services.AddValidatorsFromAssemblyComtaining<Startup>();
 
             //Add services for CurvePointRepository, CurvePointService and LocalBdContext
             services.AddScoped<ICurvePointRepository, CurvePointRepository>();
-            services.AddScoped<ICurvePointService, CurvePointService>();
             services.AddDbContext<LocalDbContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }

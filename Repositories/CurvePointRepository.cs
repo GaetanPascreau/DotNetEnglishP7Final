@@ -68,19 +68,13 @@ namespace WebApi3.Repositories
                 CreationDate = DateTime.Now
             };
 
-            // Save new CurvePoint to the database
+            // Save new CurvePoint in the database
             _context.CurvePoint.Add(curvePoint);
             await _context.SaveChangesAsync();
 
-            //return the corresponding CurvePointDTO
-            //return curvePointDTO;
-
             // return the entire list of CurvePoints with the newly added CurvePoint
-            var curvePoints = await _context.CurvePoint
-                .Select(x => CurvePointToDTO(x))
-                .ToListAsync();
-
-            return curvePoints;
+           var curvePointsAfterAddition = GetAllCurvePoints();
+            return await curvePointsAfterAddition;
         }
 
         /// <summary>
@@ -89,9 +83,9 @@ namespace WebApi3.Repositories
         /// <param name="Id"></param>
         /// <param name="curvePointDTO"></param>
         /// <returns></returns>
-        public async Task<List<CurvePointDTO>> UpdateCurvePoint(int id, CurvePointDTO curvePointDTO)
+        public async Task<CurvePointDTO> UpdateCurvePoint(int id, CurvePointDTO curvePointDTO)
         {
-            var curvePointToUpdate =  _context.CurvePoint.First(c => c.Id == id);
+            var curvePointToUpdate =  _context.CurvePoint.Find(id);
             if (curvePointToUpdate is null)
             {
                 return null;
@@ -105,12 +99,9 @@ namespace WebApi3.Repositories
 
             await _context.SaveChangesAsync();
 
-            // return the entire List of CurvePoints with the newly modified CurvePoint
-            var curvePointsDTOAfterUpdate = await _context.CurvePoint
-                .Select(x => CurvePointToDTO(x))
-                .ToListAsync();
-
-            return curvePointsDTOAfterUpdate;
+            // Return the updated CurvePoint
+            var result = CurvePointToDTO(curvePointToUpdate);
+            return result;
         }
 
         /// <summary>
@@ -119,7 +110,7 @@ namespace WebApi3.Repositories
         /// <param name="id"></param>
         public async Task<List<CurvePointDTO>> DeleteCurvePoint(int id)
         {
-            CurvePoint curvePointToDelete = _context.CurvePoint.First(c => c.Id == id);
+            CurvePoint curvePointToDelete = _context.CurvePoint.Find(id);
             if (curvePointToDelete is null)
             {
                 return null;
@@ -127,12 +118,9 @@ namespace WebApi3.Repositories
             _context.CurvePoint.Remove(curvePointToDelete);
             _context.SaveChanges();
 
-            //return the entire list of CurvePoints without the newly deleted CurvePoint
-            var curvePointsDTOAfterDeletion = await _context.CurvePoint
-                .Select(x => CurvePointToDTO(x))
-                .ToListAsync();
-
-            return curvePointsDTOAfterDeletion;
+            // Return the entire list of CurvePoints without the newly removed CurvePoint
+            var curvePointsAfterDeletion = GetAllCurvePoints();
+            return await curvePointsAfterDeletion;
         }
 
         /// <summary>

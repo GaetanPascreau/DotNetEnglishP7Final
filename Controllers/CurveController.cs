@@ -26,9 +26,12 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult Home()
         {
             var result = _curvePointService.GetAllCurvePoints();
+            if (result.Result == null)
+            {
+                return NotFound("No CurvePoints to display.");
+            }
 
             return Ok(result.Result);
-            //or just : return _curvePointService.GetAllCurvePoints();
         }
 
         /// <summary>
@@ -44,7 +47,7 @@ namespace Dot.Net.WebApi.Controllers
             var result = _curvePointService.GetSingleCurvePoint(id);
             if (result.Result == null)
             {
-                return NotFound("CurvePoint not found. Enter an existing Id.");
+                return NotFound("CurvePoint not found. Enter an valid Id.");
             }
             
             return Ok(result.Result);
@@ -58,11 +61,10 @@ namespace Dot.Net.WebApi.Controllers
         [HttpPost("/curvePoint/add")]
         public IActionResult AddCurvePoint([FromBody]CurvePointDTO curvePointDTO)
         {
-            // if the curvePoint wasn't validated by the service, return a Bad Request error
             var result = _curvePointService.CreateCurvePoint(curvePointDTO);
+            // If the curvePoint wasn't validated by the service, return a Bad Request error
             if (result is null)
             {
-                // do we return a specific message coming from the validation step???
                 return BadRequest();
             }
             return Ok(result.Result);
@@ -75,7 +77,8 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="curvePointDTO"></param>
         /// <returns></returns>
         [HttpPut("/CurvePoint/update/{id}")]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        //[ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult UpdateCurvePoint(int id, [FromBody]CurvePointDTO curvePointDTO)
         {
@@ -85,14 +88,12 @@ namespace Dot.Net.WebApi.Controllers
             }
 
             var result = _curvePointService.UpdateCurvePoint(id, curvePointDTO);
-            if (result is null)
+            if (result.Result is null)
             {
-                return BadRequest(); 
-                // or return a status 404 Not Found => return NotFound("CurvePoint was not found.");
+                return BadRequest("CurvePoint not found."); 
             }
-                return NoContent();
-            // or return a status 200 Ok => return Ok(result); ???
-            
+
+            return Ok(result.Result);            
         }
 
         /// <summary>
@@ -103,10 +104,10 @@ namespace Dot.Net.WebApi.Controllers
         [HttpDelete("/CurvePoint/delete/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult DeleteCurvePoint(int Id)
+        public IActionResult DeleteCurvePoint(int id)
         {
-            var result = _curvePointService.DeleteCurvePoint(Id);
-            if (result == null)
+            var result = _curvePointService.DeleteCurvePoint(id);
+            if (result.Result == null)
             {
                 return NotFound("CurvePoint not found.");
             }

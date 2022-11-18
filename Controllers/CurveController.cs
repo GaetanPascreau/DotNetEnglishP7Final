@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
 
@@ -10,10 +12,12 @@ namespace Dot.Net.WebApi.Controllers
     {
         // TODO: Inject Curve Point service
         private readonly ICurvePointRepository _curvePointService;
+        private readonly ILogger<CurveController> _logger;
 
-        public CurveController(ICurvePointRepository curvePointService)
+        public CurveController(ICurvePointRepository curvePointService, ILogger<CurveController> logger)
         {
             _curvePointService = curvePointService;
+            _logger = logger;
         }
 
         /// <summary>
@@ -25,6 +29,7 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Home()
         {
+            _logger.LogInformation("User requested the list of CurvePoints on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
             var result = _curvePointService.GetAllCurvePoints();
             if (result.Result == null)
             {

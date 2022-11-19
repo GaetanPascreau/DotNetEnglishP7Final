@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Globalization;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
 
@@ -29,7 +30,10 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Home()
         {
-            _logger.LogInformation("User requested the list of CurvePoints on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
+            // Add Logs with date/time in US standard
+            _logger.LogInformation("User requested the list of CurvePoints on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            // Add Logs with date/time in French standard
+            //_logger.LogInformation("User requested the list of CurvePoints on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
             var result = _curvePointService.GetAllCurvePoints();
             if (result.Result == null)
             {
@@ -49,6 +53,8 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificCurvePoint(int id)
         {
+            _logger.LogInformation("User requested the CurvePoint with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+
             var result = _curvePointService.GetSingleCurvePoint(id);
             if (result.Result == null)
             {
@@ -66,6 +72,7 @@ namespace Dot.Net.WebApi.Controllers
         [HttpPost("/curvePoint/add")]
         public IActionResult AddCurvePoint([FromBody]CurvePointDTO curvePointDTO)
         {
+            _logger.LogInformation("User created a new CurvePoint on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             var result = _curvePointService.CreateCurvePoint(curvePointDTO);
             // If the curvePoint wasn't validated by the service, return a Bad Request error
             if (result is null)
@@ -98,6 +105,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("CurvePoint not found."); 
             }
 
+            _logger.LogInformation("User updated the CurvePoint with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);            
         }
 
@@ -116,6 +124,8 @@ namespace Dot.Net.WebApi.Controllers
             {
                 return NotFound("CurvePoint not found.");
             }
+
+            _logger.LogInformation("User deleted the CurvePoint with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 

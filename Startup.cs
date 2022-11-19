@@ -7,10 +7,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
 using WebApi3;
 using WebApi3.Repositories;
-using WebApi3.Services;
+using Serilog;
 
 namespace Dot.Net.WebApi
 {
@@ -64,6 +63,9 @@ namespace Dot.Net.WebApi
             }
 
             app.UseHttpsRedirection();
+
+            // Whenever a request is made, serilog is going to log it.
+            app.UseSerilogRequestLogging();
 
             app.UseRouting();
 

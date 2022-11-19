@@ -1,0 +1,98 @@
+11/19/2022 19:24:01 Application Starting Up on "Saturday, November 19, 2022" at "6:24:01 PM"
+11/19/2022 19:24:02 User profile is available. Using '"C:\Users\Gaetan\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+11/19/2022 19:24:02 Now listening on: "http://localhost:5044"
+11/19/2022 19:24:02 Application started. Press Ctrl+C to shut down.
+11/19/2022 19:24:02 Hosting environment: "Development"
+11/19/2022 19:24:02 Content root path: "C:\Users\Gaetan\source\repos\DotNetEnglishP7_ter\src"
+11/19/2022 19:24:03 Request starting HTTP/1.1 GET http://localhost:5044/swagger/index.html  
+11/19/2022 19:24:03 Failed to determine the https port for redirect.
+11/19/2022 19:24:03 HTTP "GET" "/swagger/index.html" responded 200 in 101.6699 ms
+11/19/2022 19:24:03 Request finished in 131.5908ms 200 text/html;charset=utf-8
+11/19/2022 19:24:04 Request starting HTTP/1.1 GET http://localhost:5044/swagger/v1/swagger.json  
+11/19/2022 19:24:04 HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 92.4866 ms
+11/19/2022 19:24:04 Request finished in 96.4102ms 200 application/json;charset=utf-8
+11/19/2022 19:24:11 Request starting HTTP/1.1 GET http://localhost:5044/curvePoint/list  
+11/19/2022 19:24:11 Executing endpoint '"Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)"'
+11/19/2022 19:24:11 Route matched with "{action = \"Home\", controller = \"Curve\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Home()" on controller "Dot.Net.WebApi.Controllers.CurveController" ("WebApi3").
+11/19/2022 19:24:11 User requested the list of CurvePoints on "Saturday, November 19, 2022" at "6:24:11 PM"
+11/19/2022 19:24:11 No type was specified for the decimal column '"Ask"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"AskQuantity"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"Bid"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"BidQuantity"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"Term"' on entity type '"CurvePoint"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"Value"' on entity type '"CurvePoint"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"BuyPrice"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"BuyQuantity"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"SellPrice"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 No type was specified for the decimal column '"SellQuantity"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:24:11 Entity Framework Core "2.2.6-servicing-10079" initialized '"LocalDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11/19/2022 19:24:13 Executed DbCommand ("27"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[AsOfDate], [x].[CreationDate], [x].[CurveId], [x].[Term], [x].[Value]
+FROM [CurvePoint] AS [x]"
+11/19/2022 19:24:13 Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[WebApi3.Domain.DTO.CurvePointDTO, WebApi3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+11/19/2022 19:24:13 Executed action "Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)" in 1762.3374ms
+11/19/2022 19:24:13 Executed endpoint '"Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)"'
+11/19/2022 19:24:13 HTTP "GET" "/curvePoint/list" responded 200 in 1793.0765 ms
+11/19/2022 19:24:13 Request finished in 1798.3775ms 200 application/json; charset=utf-8
+11/19/2022 19:36:29 Application Starting Up on "Saturday, November 19, 2022" at "6:36:29 PM"
+11/19/2022 19:36:30 User profile is available. Using '"C:\Users\Gaetan\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+11/19/2022 19:36:30 Now listening on: "http://localhost:5044"
+11/19/2022 19:36:30 Application started. Press Ctrl+C to shut down.
+11/19/2022 19:36:30 Hosting environment: "Development"
+11/19/2022 19:36:30 Content root path: "C:\Users\Gaetan\source\repos\DotNetEnglishP7_ter\src"
+11/19/2022 19:36:31 Request starting HTTP/1.1 GET http://localhost:5044/swagger/index.html  
+11/19/2022 19:36:31 Failed to determine the https port for redirect.
+11/19/2022 19:36:31 HTTP "GET" "/swagger/index.html" responded 200 in 94.8070 ms
+11/19/2022 19:36:31 Request finished in 122.7571ms 200 text/html;charset=utf-8
+11/19/2022 19:36:31 Request starting HTTP/1.1 GET http://localhost:5044/swagger/v1/swagger.json  
+11/19/2022 19:36:31 HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 103.6278 ms
+11/19/2022 19:36:31 Request finished in 107.2408ms 200 application/json;charset=utf-8
+11/19/2022 19:36:36 Request starting HTTP/1.1 GET http://localhost:5044/curvePoint/list  
+11/19/2022 19:36:36 Executing endpoint '"Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)"'
+11/19/2022 19:36:36 Route matched with "{action = \"Home\", controller = \"Curve\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Home()" on controller "Dot.Net.WebApi.Controllers.CurveController" ("WebApi3").
+11/19/2022 19:36:36 User requested the list of CurvePoints on "Saturday, November 19, 2022" at "6:36:36 PM"
+11/19/2022 19:36:37 No type was specified for the decimal column '"Ask"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"AskQuantity"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"Bid"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"BidQuantity"' on entity type '"BidList"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"Term"' on entity type '"CurvePoint"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"Value"' on entity type '"CurvePoint"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"BuyPrice"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"BuyQuantity"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"SellPrice"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 No type was specified for the decimal column '"SellQuantity"' on entity type '"Trade"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+11/19/2022 19:36:37 Entity Framework Core "2.2.6-servicing-10079" initialized '"LocalDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+11/19/2022 19:36:37 Executed DbCommand ("10"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[AsOfDate], [x].[CreationDate], [x].[CurveId], [x].[Term], [x].[Value]
+FROM [CurvePoint] AS [x]"
+11/19/2022 19:36:37 Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[WebApi3.Domain.DTO.CurvePointDTO, WebApi3, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+11/19/2022 19:36:37 Executed action "Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)" in 598.8774ms
+11/19/2022 19:36:37 Executed endpoint '"Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)"'
+11/19/2022 19:36:37 HTTP "GET" "/curvePoint/list" responded 200 in 632.7048 ms
+11/19/2022 19:36:37 Request finished in 638.0415ms 200 application/json; charset=utf-8
+11/19/2022 19:45:52 Application Starting Up on "Saturday, November 19, 2022" at "6:45:52 PM"
+11/19/2022 19:45:52 User profile is available. Using '"C:\Users\Gaetan\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+11/19/2022 19:45:52 Now listening on: "http://localhost:5044"
+11/19/2022 19:45:52 Application started. Press Ctrl+C to shut down.
+11/19/2022 19:45:52 Hosting environment: "Development"
+11/19/2022 19:45:52 Content root path: "C:\Users\Gaetan\source\repos\DotNetEnglishP7_ter\src"
+11/19/2022 19:45:53 Request starting HTTP/1.1 GET http://localhost:5044/swagger/index.html  
+11/19/2022 19:45:53 Failed to determine the https port for redirect.
+11/19/2022 19:45:53 HTTP "GET" "/swagger/index.html" responded 200 in 85.0765 ms
+11/19/2022 19:45:53 Request finished in 117.6926ms 200 text/html;charset=utf-8
+11/19/2022 19:45:53 Request starting HTTP/1.1 GET http://localhost:5044/swagger/v1/swagger.json  
+11/19/2022 19:45:53 HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 101.0277 ms
+11/19/2022 19:45:53 Request finished in 104.8343ms 200 application/json;charset=utf-8
+11/19/2022 19:46:09 Application Starting Up on "Saturday, November 19, 2022" at "6:46:09 PM"
+11/19/2022 19:46:10 User profile is available. Using '"C:\Users\Gaetan\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+11/19/2022 19:46:10 Now listening on: "http://localhost:5044"
+11/19/2022 19:46:10 Application started. Press Ctrl+C to shut down.
+11/19/2022 19:46:10 Hosting environment: "Development"
+11/19/2022 19:46:10 Content root path: "C:\Users\Gaetan\source\repos\DotNetEnglishP7_ter\src"
+11/19/2022 19:46:11 Request starting HTTP/1.1 GET http://localhost:5044/swagger/index.html  
+11/19/2022 19:46:11 Failed to determine the https port for redirect.
+11/19/2022 19:46:11 HTTP "GET" "/swagger/index.html" responded 200 in 84.6580 ms
+11/19/2022 19:46:11 Request finished in 110.1376ms 200 text/html;charset=utf-8
+11/19/2022 19:46:11 Request starting HTTP/1.1 GET http://localhost:5044/swagger/v1/swagger.json  
+11/19/2022 19:46:11 HTTP "GET" "/swagger/v1/swagger.json" responded 200 in 87.8393 ms
+11/19/2022 19:46:11 Request finished in 91.4372ms 200 application/json;charset=utf-8

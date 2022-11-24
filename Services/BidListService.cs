@@ -43,7 +43,7 @@ namespace WebApi3.Services
         /// <summary>
         /// Methods that checks if passed data is valid, then calls the CreateBidList() method from BidListRepository
         /// </summary>
-        /// <param name="bidListDTO"></param>
+        /// <param name="bidListDTOtoCreate"></param>
         public Task<List<BidListDTO>> CreateBidList(BidListDTO bidListDTOtoCreate)
         {
             var validator = new BidListValidator();
@@ -76,8 +76,8 @@ namespace WebApi3.Services
                 return null;
             }
 
-            var bidListDTOsAfterAddition = _bidListRepository.UpdateBidList(id, bidListDTOtoUpdate);
-            return bidListDTOsAfterAddition;
+            var bidListDTOAfterAddition = _bidListRepository.UpdateBidList(id, bidListDTOtoUpdate);
+            return bidListDTOAfterAddition;
         }
 
         /// <summary>

@@ -38,6 +38,7 @@ namespace Dot.Net.WebApi
             //Add services for CurvePointRepository and LocalBdContext
             services.AddScoped<ICurvePointRepository, CurvePointRepository>();
             services.AddScoped<IBidListRepository, BidListRepository>();
+            services.AddScoped<IRatingRepository, RatingRepository>();
 
             services.AddDbContext<LocalDbContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

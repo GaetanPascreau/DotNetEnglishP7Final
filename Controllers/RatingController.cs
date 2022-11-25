@@ -12,7 +12,7 @@ namespace Dot.Net.WebApi.Controllers
     public class RatingController : Controller
     {
         // TODO: Inject Rating service
-        private readonly IRatingRepository _ratingService;
+        private readonly IRatingRepository _ratingService; 
         private readonly ILogger<RatingController> _logger;
 
         public RatingController(IRatingRepository ratingService, ILogger<RatingController> logger)
@@ -37,6 +37,8 @@ namespace Dot.Net.WebApi.Controllers
             var result = _ratingService.GetAllRatings();
             if (result.Result == null)
             {
+                _logger.LogInformation("User requested the list of Ratings on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogError("There is no Rating to display");
                 return NotFound("No Rating to display.");
             }
 
@@ -58,7 +60,8 @@ namespace Dot.Net.WebApi.Controllers
             var result = _ratingService.GetSingleRating(id);
             if (result.Result == null)
             {
-                return NotFound("Rating not found. Enter an valid Id.");
+                _logger.LogError("No Rating with Id = {Id} was found. User was advised to enter a valid Id.", id);
+                return NotFound("Rating not found. Please enter an valid Id.");
             }
 
             return Ok(result.Result);
@@ -72,13 +75,17 @@ namespace Dot.Net.WebApi.Controllers
         [HttpPost("/rating/add")]
         public IActionResult AddRating([FromBody] Rating rating)
         {
-            _logger.LogInformation("User created a new Rating on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             var result = _ratingService.CreateRating(rating);
             // If the Rating wasn't validated by the service, return a Bad Request error
             if (result is null)
             {
-                return BadRequest();
+                // this addition to the logs does not work...
+                //_logger.LogInformation("User requested to create a new Rating on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                //_logger.LogError("Rating could not be created. {Error}.", result.Result);
+                return BadRequest(result.Result);
             }
+
+            _logger.LogInformation("User created a new Rating on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -101,7 +108,9 @@ namespace Dot.Net.WebApi.Controllers
             var result = _ratingService.UpdateRating(id, rating);
             if (result.Result is null)
             {
-                return BadRequest("Rating not found.");
+                //_logger.LogInformation("User requested to update the Rating with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                //_logger.LogError("No Rating with Id = {Id} was found. User was advised to enter a valid Id.", id);
+                return BadRequest("Rating not found. Please enter a valid Id.");
             }
 
             _logger.LogInformation("User updated the Rating with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -121,7 +130,9 @@ namespace Dot.Net.WebApi.Controllers
             var result = _ratingService.DeleteRating(id);
             if (result.Result == null)
             {
-                return NotFound("Rating not found.");
+                _logger.LogInformation("User requested to delete the Rating with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogError("No Rating with Id = {Id} was found. User was advised to enter a valid Id.", id);
+                return NotFound("Rating not found. Please enter a valid Id.");
             }
 
             _logger.LogInformation("User deleted the Rating with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));

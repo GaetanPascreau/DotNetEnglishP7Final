@@ -12,3 +12,145 @@
 11/24/2022 20:02:35 User created a new Rating on "Thursday, November 24, 2022" at "7:02:35 PM"
 11/24/2022 20:05:03 User updated the Rating with Id = 2002 on "Thursday, November 24, 2022" at "7:05:03 PM"
 11/24/2022 20:06:46 User deleted the Rating with Id = 1002 on "Thursday, November 24, 2022" at "7:06:46 PM"
+11/25/2022 10:25:57 Application Starting Up on "Friday, November 25, 2022" at "9:25:57 AM"
+11/25/2022 10:26:07 User requested the list of CurvePoints on "Friday, November 25, 2022" at "9:26:07 AM"
+11/25/2022 10:41:36 Application Starting Up on "Friday, November 25, 2022" at "9:41:36 AM"
+11/25/2022 10:41:55 User requested the Rating with Id = 16 on "Friday, November 25, 2022" at "9:41:55 AM"
+11/25/2022 10:45:47 Application Starting Up on "Friday, November 25, 2022" at "9:45:47 AM"
+11/25/2022 10:46:07 User requested the Rating with Id = 18 on "Friday, November 25, 2022" at "9:46:07 AM"
+11/25/2022 10:46:07 No Rating with Id = 18 was found. User was advised to enter a valis Id.
+11/25/2022 10:49:27 Application Starting Up on "Friday, November 25, 2022" at "9:49:27 AM"
+11/25/2022 10:49:37 User requested the Rating with Id = 20 on "Friday, November 25, 2022" at "9:49:37 AM"
+11/25/2022 10:49:37 No Rating with Id = 20 was found. User was advised to enter a valid Id.
+11/25/2022 10:51:11 User requested the list of Ratings on "Friday, November 25, 2022" at "9:51:11 AM"
+11/25/2022 11:14:27 Application Starting Up on "Friday, November 25, 2022" at "10:14:27 AM"
+11/25/2022 11:17:49 Application Starting Up on "Friday, November 25, 2022" at "10:17:49 AM"
+11/25/2022 11:22:53 Application Starting Up on "Friday, November 25, 2022" at "10:22:53 AM"
+11/25/2022 11:28:26 Application Starting Up on "Friday, November 25, 2022" at "10:28:26 AM"
+11/25/2022 11:29:36 User created a new Rating on "Friday, November 25, 2022" at "10:29:36 AM"
+11/25/2022 11:33:15 User updated the Rating with Id = 3002 on "Friday, November 25, 2022" at "10:33:15 AM"
+11/25/2022 11:35:05 User deleted the Rating with Id = 3002 on "Friday, November 25, 2022" at "10:35:05 AM"
+11/25/2022 11:43:49 Application Starting Up on "Friday, November 25, 2022" at "10:43:49 AM"
+11/25/2022 11:44:10 User requested to delete the Rating with Id = 3010 on "Friday, November 25, 2022" at "10:44:10 AM"
+11/25/2022 11:44:10 No Rating with Id = 3010 was found. User was advised to enter a valid Id.
+11/25/2022 11:55:47 Application Starting Up on "Friday, November 25, 2022" at "10:55:47 AM"
+11/25/2022 11:57:26 User created a new Rating on "Friday, November 25, 2022" at "10:57:26 AM"
+11/25/2022 11:58:22 User updated the Rating with Id = 3003 on "Friday, November 25, 2022" at "10:58:22 AM"
+11/25/2022 11:58:49 User requested to delete the Rating with Id = 3004 on "Friday, November 25, 2022" at "10:58:49 AM"
+11/25/2022 11:58:49 No Rating with Id = 3004 was found. User was advised to enter a valid Id.
+11/25/2022 11:59:25 User requested to update the Rating with Id = 3004 on "Friday, November 25, 2022" at "10:59:25 AM"
+11/25/2022 11:59:25 No Rating with Id = 3004 was found. User was advised to enter a valid Id.
+11/25/2022 11:59:55 User deleted the Rating with Id = 3003 on "Friday, November 25, 2022" at "10:59:55 AM"
+11/25/2022 12:11:19 Application Starting Up on "Friday, November 25, 2022" at "11:11:19 AM"
+11/25/2022 14:53:40 Application Starting Up on "Friday, November 25, 2022" at "1:53:40 PM"
+11/25/2022 14:53:55 User requested the list of Ratings on "Friday, November 25, 2022" at "1:53:55 PM"
+11/25/2022 14:54:21 User requested the Rating with Id = 1 on "Friday, November 25, 2022" at "1:54:21 PM"
+11/25/2022 15:02:49 User requested the Rating with Id = 101 on "Friday, November 25, 2022" at "2:02:49 PM"
+11/25/2022 15:02:50 No Rating with Id = 101 was found. User was advised to enter a valid Id.
+11/25/2022 15:17:57 Application Starting Up on "Friday, November 25, 2022" at "2:17:57 PM"
+11/25/2022 15:18:25 User created a new Rating on "Friday, November 25, 2022" at "2:18:25 PM"
+11/25/2022 15:23:49 Application Starting Up on "Friday, November 25, 2022" at "2:23:49 PM"
+11/25/2022 15:24:04 User created a new Rating on "Friday, November 25, 2022" at "2:24:04 PM"
+11/25/2022 15:25:06 Application Starting Up on "Friday, November 25, 2022" at "2:25:06 PM"
+11/25/2022 15:29:53 Application Starting Up on "Friday, November 25, 2022" at "2:29:53 PM"
+11/25/2022 15:30:02 HTTP "POST" "/rating/add" responded 500 in 28.2731 ms
+System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+11/25/2022 15:30:02 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+11/25/2022 15:34:00 Application Starting Up on "Friday, November 25, 2022" at "2:34:00 PM"
+11/25/2022 15:34:00 The Application Failed to Start Correctly.
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: WebApi3.Services.RatingService Lifetime: Scoped ImplementationType: WebApi3.Services.RatingService': Unable to resolve service for type 'WebApi3.Repositories.IRatingRepository' while attempting to activate 'WebApi3.Services.RatingService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: WebApi3.Services.RatingService Lifetime: Scoped ImplementationType: WebApi3.Services.RatingService': Unable to resolve service for type 'WebApi3.Repositories.IRatingRepository' while attempting to activate 'WebApi3.Services.RatingService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Repositories.IRatingRepository' while attempting to activate 'WebApi3.Services.RatingService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Dot.Net.WebApi.Program.Main(String[] args) in C:\Users\Gaetan\source\repos\DotNetEnglishP7_ter\src\Program.cs:line 28
+11/25/2022 15:37:24 Application Starting Up on "Friday, November 25, 2022" at "2:37:24 PM"
+11/25/2022 15:37:33 HTTP "POST" "/rating/add" responded 500 in 30.4350 ms
+System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+11/25/2022 15:37:34 An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+11/25/2022 15:38:01 Application Starting Up on "Friday, November 25, 2022" at "2:38:01 PM"
+11/25/2022 15:38:24 User created a new Rating on "Friday, November 25, 2022" at "2:38:24 PM"
+11/25/2022 15:38:52 User requested to delete the Rating with Id = 30010 on "Friday, November 25, 2022" at "2:38:52 PM"
+11/25/2022 15:38:52 No Rating with Id = 30010 was found. User was advised to enter a valid Id.
+11/25/2022 15:39:03 User deleted the Rating with Id = 3007 on "Friday, November 25, 2022" at "2:39:03 PM"

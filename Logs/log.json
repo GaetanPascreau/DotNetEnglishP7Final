@@ -1,14 +1,840 @@
-{"Timestamp":"2022-11-22T20:15:37.1420688+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Tuesday, November 22, 2022","Time":"7:15:37 PM","MachineName":"DESKTOP-PASCREA","ProcessId":34260,"ThreadId":1}}
-{"Timestamp":"2022-11-22T20:15:45.9831925+01:00","Level":"Information","MessageTemplate":"User requested the list of CurvePoints on {Date} at {Time}","Properties":{"Date":"Tuesday, November 22, 2022","Time":"7:15:45 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"7e9e82f1-93af-4a2c-9899-f3e3ad8e7295","ActionName":"Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)","RequestId":"0HMMCNNO5UQRV:00000003","RequestPath":"/bidList/list","SpanId":"|93674f3f-434a33946527b90b.","TraceId":"93674f3f-434a33946527b90b","ParentId":"","ConnectionId":"0HMMCNNO5UQRV","MachineName":"DESKTOP-PASCREA","ProcessId":34260,"ThreadId":18}}
-{"Timestamp":"2022-11-22T20:15:56.5805808+01:00","Level":"Information","MessageTemplate":"User requested the list of CurvePoints on {Date} at {Time}","Properties":{"Date":"Tuesday, November 22, 2022","Time":"7:15:56 PM","SourceContext":"Dot.Net.WebApi.Controllers.CurveController","ActionId":"bf418173-0328-448d-bfaa-2d30e26b5138","ActionName":"Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)","RequestId":"0HMMCNNO5UQRV:00000004","RequestPath":"/curvePoint/list","SpanId":"|93674f40-434a33946527b90b.","TraceId":"93674f40-434a33946527b90b","ParentId":"","ConnectionId":"0HMMCNNO5UQRV","MachineName":"DESKTOP-PASCREA","ProcessId":34260,"ThreadId":17}}
-{"Timestamp":"2022-11-22T20:16:07.5106559+01:00","Level":"Information","MessageTemplate":"User requested the BidList with Id = {Id} on {Date} at {Time}","Properties":{"Id":1,"Date":"Tuesday, November 22, 2022","Time":"7:16:07 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"a0929d82-0859-4dfd-bf9f-93efc0d168f5","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMCNNO5UQRV:00000005","RequestPath":"/bidList/1","SpanId":"|93674f41-434a33946527b90b.","TraceId":"93674f41-434a33946527b90b","ParentId":"","ConnectionId":"0HMMCNNO5UQRV","MachineName":"DESKTOP-PASCREA","ProcessId":34260,"ThreadId":15}}
-{"Timestamp":"2022-11-22T20:16:16.5126342+01:00","Level":"Information","MessageTemplate":"User requested the BidList with Id = {Id} on {Date} at {Time}","Properties":{"Id":1023,"Date":"Tuesday, November 22, 2022","Time":"7:16:16 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"a0929d82-0859-4dfd-bf9f-93efc0d168f5","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMCNNO5UQRV:00000006","RequestPath":"/bidList/1023","SpanId":"|93674f42-434a33946527b90b.","TraceId":"93674f42-434a33946527b90b","ParentId":"","ConnectionId":"0HMMCNNO5UQRV","MachineName":"DESKTOP-PASCREA","ProcessId":34260,"ThreadId":16}}
-{"Timestamp":"2022-11-22T20:19:03.8644775+01:00","Level":"Information","MessageTemplate":"User requested the CurvePoint with Id = {Id} on {Date} at {Time}","Properties":{"Id":2,"Date":"Tuesday, November 22, 2022","Time":"7:19:03 PM","SourceContext":"Dot.Net.WebApi.Controllers.CurveController","ActionId":"1f5245b2-06a8-4ee4-a5ee-349c83c12d9d","ActionName":"Dot.Net.WebApi.Controllers.CurveController.GetSpecificCurvePoint (WebApi3)","RequestId":"0HMMCNNO5UQRV:00000007","RequestPath":"/curvePoint/2","SpanId":"|93674f43-434a33946527b90b.","TraceId":"93674f43-434a33946527b90b","ParentId":"","ConnectionId":"0HMMCNNO5UQRV","MachineName":"DESKTOP-PASCREA","ProcessId":34260,"ThreadId":21}}
-{"Timestamp":"2022-11-22T20:21:42.1144746+01:00","Level":"Information","MessageTemplate":"User created a new CurvePoint on {Date} at {Time}","Properties":{"Date":"Tuesday, November 22, 2022","Time":"7:21:42 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"8465015d-d6fe-4db5-9ee5-47351be935da","ActionName":"Dot.Net.WebApi.Controllers.BidListController.AddBidList (WebApi3)","RequestId":"0HMMCNNO5UQRV:00000009","RequestPath":"/bidList/add","SpanId":"|93674f45-434a33946527b90b.","TraceId":"93674f45-434a33946527b90b","ParentId":"","ConnectionId":"0HMMCNNO5UQRV","MachineName":"DESKTOP-PASCREA","ProcessId":34260,"ThreadId":22}}
-{"Timestamp":"2022-11-24T19:58:54.5616326+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Thursday, November 24, 2022","Time":"6:58:54 PM","MachineName":"DESKTOP-PASCREA","ProcessId":26244,"ThreadId":1}}
-{"Timestamp":"2022-11-24T19:59:20.2949845+01:00","Level":"Information","MessageTemplate":"User requested the list of Ratings on {Date} at {Time}","Properties":{"Date":"Thursday, November 24, 2022","Time":"6:59:20 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"2b3e4fa5-954c-4c22-a35a-8d5bdd70adc5","ActionName":"Dot.Net.WebApi.Controllers.RatingController.Home (WebApi3)","RequestId":"0HMME9NNTV7ON:00000003","RequestPath":"/rating/list","SpanId":"|dc89916d-4618bb863bb38e2c.","TraceId":"dc89916d-4618bb863bb38e2c","ParentId":"","ConnectionId":"0HMME9NNTV7ON","MachineName":"DESKTOP-PASCREA","ProcessId":26244,"ThreadId":14}}
-{"Timestamp":"2022-11-24T19:59:37.6075617+01:00","Level":"Information","MessageTemplate":"User requested the Rating with Id = {Id} on {Date} at {Time}","Properties":{"Id":2,"Date":"Thursday, November 24, 2022","Time":"6:59:37 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"0de96ea9-0e52-4d21-b90e-f6162a6f9744","ActionName":"Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)","RequestId":"0HMME9NNTV7ON:00000004","RequestPath":"/rating/2","SpanId":"|dc89916e-4618bb863bb38e2c.","TraceId":"dc89916e-4618bb863bb38e2c","ParentId":"","ConnectionId":"0HMME9NNTV7ON","MachineName":"DESKTOP-PASCREA","ProcessId":26244,"ThreadId":4}}
-{"Timestamp":"2022-11-24T20:00:06.7896464+01:00","Level":"Information","MessageTemplate":"User requested the Rating with Id = {Id} on {Date} at {Time}","Properties":{"Id":1,"Date":"Thursday, November 24, 2022","Time":"7:00:06 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"0de96ea9-0e52-4d21-b90e-f6162a6f9744","ActionName":"Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)","RequestId":"0HMME9NNTV7ON:00000005","RequestPath":"/rating/1","SpanId":"|dc89916f-4618bb863bb38e2c.","TraceId":"dc89916f-4618bb863bb38e2c","ParentId":"","ConnectionId":"0HMME9NNTV7ON","MachineName":"DESKTOP-PASCREA","ProcessId":26244,"ThreadId":14}}
-{"Timestamp":"2022-11-24T20:02:35.1946361+01:00","Level":"Information","MessageTemplate":"User created a new Rating on {Date} at {Time}","Properties":{"Date":"Thursday, November 24, 2022","Time":"7:02:35 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"996b3b7a-a348-47f1-9d31-af4ee1e03134","ActionName":"Dot.Net.WebApi.Controllers.RatingController.AddRating (WebApi3)","RequestId":"0HMME9NNTV7ON:00000006","RequestPath":"/rating/add","SpanId":"|dc899170-4618bb863bb38e2c.","TraceId":"dc899170-4618bb863bb38e2c","ParentId":"","ConnectionId":"0HMME9NNTV7ON","MachineName":"DESKTOP-PASCREA","ProcessId":26244,"ThreadId":17}}
-{"Timestamp":"2022-11-24T20:05:03.6959614+01:00","Level":"Information","MessageTemplate":"User updated the Rating with Id = {Id} on {Date} at {Time}","Properties":{"Id":2002,"Date":"Thursday, November 24, 2022","Time":"7:05:03 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"b052777e-53ee-486e-ba36-c3280dd8cf21","ActionName":"Dot.Net.WebApi.Controllers.RatingController.UpdateRatingt (WebApi3)","RequestId":"0HMME9NNTV7ON:00000007","RequestPath":"/rating/update/2002","SpanId":"|dc899171-4618bb863bb38e2c.","TraceId":"dc899171-4618bb863bb38e2c","ParentId":"","ConnectionId":"0HMME9NNTV7ON","MachineName":"DESKTOP-PASCREA","ProcessId":26244,"ThreadId":14}}
-{"Timestamp":"2022-11-24T20:06:46.2226829+01:00","Level":"Information","MessageTemplate":"User deleted the Rating with Id = {Id} on {Date} at {Time}","Properties":{"Id":1002,"Date":"Thursday, November 24, 2022","Time":"7:06:46 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"401df0ba-c220-49bc-a42f-87099fbf7fb9","ActionName":"Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)","RequestId":"0HMME9NNTV7ON:0000000C","RequestPath":"/rating/delete/1002","SpanId":"|dc899176-4618bb863bb38e2c.","TraceId":"dc899176-4618bb863bb38e2c","ParentId":"","ConnectionId":"0HMME9NNTV7ON","MachineName":"DESKTOP-PASCREA","ProcessId":26244,"ThreadId":18}}
+{
+
+  {
+    "Timestamp": "2022-11-22T20:15:37.1420688+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Tuesday, November 22, 2022",
+      "Time": "7:15:37 PM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34260,
+      "ThreadId": 1
+    }
+  },
+  {
+    "Timestamp": "2022-11-22T20:15:45.9831925+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the list of CurvePoints on {Date} at {Time}",
+    "Properties": {
+      "Date": "Tuesday, November 22, 2022",
+      "Time": "7:15:45 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+      "ActionId": "7e9e82f1-93af-4a2c-9899-f3e3ad8e7295",
+      "ActionName": "Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)",
+      "RequestId": "0HMMCNNO5UQRV:00000003",
+      "RequestPath": "/bidList/list",
+      "SpanId": "|93674f3f-434a33946527b90b.",
+      "TraceId": "93674f3f-434a33946527b90b",
+      "ParentId": "",
+      "ConnectionId": "0HMMCNNO5UQRV",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34260,
+      "ThreadId": 18
+    }
+  },
+  {
+    "Timestamp": "2022-11-22T20:15:56.5805808+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the list of CurvePoints on {Date} at {Time}",
+    "Properties": {
+      "Date": "Tuesday, November 22, 2022",
+      "Time": "7:15:56 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.CurveController",
+      "ActionId": "bf418173-0328-448d-bfaa-2d30e26b5138",
+      "ActionName": "Dot.Net.WebApi.Controllers.CurveController.Home (WebApi3)",
+      "RequestId": "0HMMCNNO5UQRV:00000004",
+      "RequestPath": "/curvePoint/list",
+      "SpanId": "|93674f40-434a33946527b90b.",
+      "TraceId": "93674f40-434a33946527b90b",
+      "ParentId": "",
+      "ConnectionId": "0HMMCNNO5UQRV",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34260,
+      "ThreadId": 17
+    }
+  }
+  {
+    "Timestamp": "2022-11-22T20:16:07.5106559+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the BidList with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 1,
+      "Date": "Tuesday, November 22, 2022",
+      "Time": "7:16:07 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+      "ActionId": "a0929d82-0859-4dfd-bf9f-93efc0d168f5",
+      "ActionName": "Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)",
+      "RequestId": "0HMMCNNO5UQRV:00000005",
+      "RequestPath": "/bidList/1",
+      "SpanId": "|93674f41-434a33946527b90b.",
+      "TraceId": "93674f41-434a33946527b90b",
+      "ParentId": "",
+      "ConnectionId": "0HMMCNNO5UQRV",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34260,
+      "ThreadId": 15
+    }
+  }
+  {
+    "Timestamp": "2022-11-22T20:16:16.5126342+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the BidList with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 1023,
+      "Date": "Tuesday, November 22, 2022",
+      "Time": "7:16:16 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+      "ActionId": "a0929d82-0859-4dfd-bf9f-93efc0d168f5",
+      "ActionName": "Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)",
+      "RequestId": "0HMMCNNO5UQRV:00000006",
+      "RequestPath": "/bidList/1023",
+      "SpanId": "|93674f42-434a33946527b90b.",
+      "TraceId": "93674f42-434a33946527b90b",
+      "ParentId": "",
+      "ConnectionId": "0HMMCNNO5UQRV",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34260,
+      "ThreadId": 16
+    }
+  }
+  {
+    "Timestamp": "2022-11-22T20:19:03.8644775+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the CurvePoint with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 2,
+      "Date": "Tuesday, November 22, 2022",
+      "Time": "7:19:03 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.CurveController",
+      "ActionId": "1f5245b2-06a8-4ee4-a5ee-349c83c12d9d",
+      "ActionName": "Dot.Net.WebApi.Controllers.CurveController.GetSpecificCurvePoint (WebApi3)",
+      "RequestId": "0HMMCNNO5UQRV:00000007",
+      "RequestPath": "/curvePoint/2",
+      "SpanId": "|93674f43-434a33946527b90b.",
+      "TraceId": "93674f43-434a33946527b90b",
+      "ParentId": "",
+      "ConnectionId": "0HMMCNNO5UQRV",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34260,
+      "ThreadId": 21
+    }
+  }
+  {
+    "Timestamp": "2022-11-22T20:21:42.1144746+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User created a new CurvePoint on {Date} at {Time}",
+    "Properties": {
+      "Date": "Tuesday, November 22, 2022",
+      "Time": "7:21:42 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+      "ActionId": "8465015d-d6fe-4db5-9ee5-47351be935da",
+      "ActionName": "Dot.Net.WebApi.Controllers.BidListController.AddBidList (WebApi3)",
+      "RequestId": "0HMMCNNO5UQRV:00000009",
+      "RequestPath": "/bidList/add",
+      "SpanId": "|93674f45-434a33946527b90b.",
+      "TraceId": "93674f45-434a33946527b90b",
+      "ParentId": "",
+      "ConnectionId": "0HMMCNNO5UQRV",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34260,
+      "ThreadId": 22
+    }
+  }
+  {
+    "Timestamp": "2022-11-24T19:58:54.5616326+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Thursday, November 24, 2022",
+      "Time": "6:58:54 PM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 26244,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-24T19:59:20.2949845+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the list of Ratings on {Date} at {Time}",
+    "Properties": {
+      "Date": "Thursday, November 24, 2022",
+      "Time": "6:59:20 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "2b3e4fa5-954c-4c22-a35a-8d5bdd70adc5",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.Home (WebApi3)",
+      "RequestId": "0HMME9NNTV7ON:00000003",
+      "RequestPath": "/rating/list",
+      "SpanId": "|dc89916d-4618bb863bb38e2c.",
+      "TraceId": "dc89916d-4618bb863bb38e2c",
+      "ParentId": "",
+      "ConnectionId": "0HMME9NNTV7ON",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 26244,
+      "ThreadId": 14
+    }
+  }
+  {
+    "Timestamp": "2022-11-24T19:59:37.6075617+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 2,
+      "Date": "Thursday, November 24, 2022",
+      "Time": "6:59:37 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "0de96ea9-0e52-4d21-b90e-f6162a6f9744",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)",
+      "RequestId": "0HMME9NNTV7ON:00000004",
+      "RequestPath": "/rating/2",
+      "SpanId": "|dc89916e-4618bb863bb38e2c.",
+      "TraceId": "dc89916e-4618bb863bb38e2c",
+      "ParentId": "",
+      "ConnectionId": "0HMME9NNTV7ON",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 26244,
+      "ThreadId": 4
+    }
+  }
+  {
+    "Timestamp": "2022-11-24T20:00:06.7896464+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 1,
+      "Date": "Thursday, November 24, 2022",
+      "Time": "7:00:06 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "0de96ea9-0e52-4d21-b90e-f6162a6f9744",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)",
+      "RequestId": "0HMME9NNTV7ON:00000005",
+      "RequestPath": "/rating/1",
+      "SpanId": "|dc89916f-4618bb863bb38e2c.",
+      "TraceId": "dc89916f-4618bb863bb38e2c",
+      "ParentId": "",
+      "ConnectionId": "0HMME9NNTV7ON",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 26244,
+      "ThreadId": 14
+    }
+  }
+  {
+    "Timestamp": "2022-11-24T20:02:35.1946361+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User created a new Rating on {Date} at {Time}",
+    "Properties": {
+      "Date": "Thursday, November 24, 2022",
+      "Time": "7:02:35 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "996b3b7a-a348-47f1-9d31-af4ee1e03134",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.AddRating (WebApi3)",
+      "RequestId": "0HMME9NNTV7ON:00000006",
+      "RequestPath": "/rating/add",
+      "SpanId": "|dc899170-4618bb863bb38e2c.",
+      "TraceId": "dc899170-4618bb863bb38e2c",
+      "ParentId": "",
+      "ConnectionId": "0HMME9NNTV7ON",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 26244,
+      "ThreadId": 17
+    }
+  }
+  {
+    "Timestamp": "2022-11-24T20:05:03.6959614+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User updated the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 2002,
+      "Date": "Thursday, November 24, 2022",
+      "Time": "7:05:03 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "b052777e-53ee-486e-ba36-c3280dd8cf21",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.UpdateRatingt (WebApi3)",
+      "RequestId": "0HMME9NNTV7ON:00000007",
+      "RequestPath": "/rating/update/2002",
+      "SpanId": "|dc899171-4618bb863bb38e2c.",
+      "TraceId": "dc899171-4618bb863bb38e2c",
+      "ParentId": "",
+      "ConnectionId": "0HMME9NNTV7ON",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 26244,
+      "ThreadId": 14
+    }
+  }
+  {
+    "Timestamp": "2022-11-24T20:06:46.2226829+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User deleted the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 1002,
+      "Date": "Thursday, November 24, 2022",
+      "Time": "7:06:46 PM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "401df0ba-c220-49bc-a42f-87099fbf7fb9",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)",
+      "RequestId": "0HMME9NNTV7ON:0000000C",
+      "RequestPath": "/rating/delete/1002",
+      "SpanId": "|dc899176-4618bb863bb38e2c.",
+      "TraceId": "dc899176-4618bb863bb38e2c",
+      "ParentId": "",
+      "ConnectionId": "0HMME9NNTV7ON",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 26244,
+      "ThreadId": 18
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:25:57.0955036+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:25:57 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 21264,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:26:07.6316928+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the list of CurvePoints on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:26:07 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+      "ActionId": "42cb7a89-2833-4b7e-b21e-507c3dc1df3c",
+      "ActionName": "Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)",
+      "RequestId": "0HMMEOS7UL3Q3:00000003",
+      "RequestPath": "/bidList/list",
+      "SpanId": "|cf9115dc-40f86c61f27c3644.",
+      "TraceId": "cf9115dc-40f86c61f27c3644",
+      "ParentId": "",
+      "ConnectionId": "0HMMEOS7UL3Q3",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 21264,
+      "ThreadId": 4
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:41:36.5192105+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:41:36 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34780,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:41:55.4362945+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 16,
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:41:55 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "2e852fa9-cd63-4dc1-93a3-f109f0662f51",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)",
+      "RequestId": "0HMMEP4VO9R7M:00000003",
+      "RequestPath": "/rating/16",
+      "SpanId": "|90993a8f-477cff5b961cb199.",
+      "TraceId": "90993a8f-477cff5b961cb199",
+      "ParentId": "",
+      "ConnectionId": "0HMMEP4VO9R7M",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34780,
+      "ThreadId": 4
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:45:47.7362446+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:45:47 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 6984,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:46:07.1354289+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 18,
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:46:07 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "3d3c9a5b-4bf6-4a8b-b37d-69f9967e8d3d",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)",
+      "RequestId": "0HMMEP7AJRK7O:00000003",
+      "RequestPath": "/rating/18",
+      "SpanId": "|f6946125-4c7b55972ef79006.",
+      "TraceId": "f6946125-4c7b55972ef79006",
+      "ParentId": "",
+      "ConnectionId": "0HMMEP7AJRK7O",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 6984,
+      "ThreadId": 7
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:46:07.6081628+01:00",
+    "Level": "Information",
+    "MessageTemplate": "No Rating with Id = {Id} was found. User was advised to enter a valis Id.",
+    "Properties": {
+      "Id": 18,
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "3d3c9a5b-4bf6-4a8b-b37d-69f9967e8d3d",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)",
+      "RequestId": "0HMMEP7AJRK7O:00000003",
+      "RequestPath": "/rating/18",
+      "SpanId": "|f6946125-4c7b55972ef79006.",
+      "TraceId": "f6946125-4c7b55972ef79006",
+      "ParentId": "",
+      "ConnectionId": "0HMMEP7AJRK7O",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 6984,
+      "ThreadId": 7
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:49:27.9911696+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:49:27 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 1856,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:49:37.1983713+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 20,
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:49:37 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "01a2df7b-5301-4de3-a6a4-539761efa6ee",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)",
+      "RequestId": "0HMMEP9C8LRV2:00000003",
+      "RequestPath": "/rating/20",
+      "SpanId": "|5a60e6e6-413826a6570ab9ef.",
+      "TraceId": "5a60e6e6-413826a6570ab9ef",
+      "ParentId": "",
+      "ConnectionId": "0HMMEP9C8LRV2",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 1856,
+      "ThreadId": 14
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:49:37.6697143+01:00",
+    "Level": "Error",
+    "MessageTemplate": "No Rating with Id = {Id} was found. User was advised to enter a valid Id.",
+    "Properties": {
+      "Id": 20,
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "01a2df7b-5301-4de3-a6a4-539761efa6ee",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.GetSpecificRating (WebApi3)",
+      "RequestId": "0HMMEP9C8LRV2:00000003",
+      "RequestPath": "/rating/20",
+      "SpanId": "|5a60e6e6-413826a6570ab9ef.",
+      "TraceId": "5a60e6e6-413826a6570ab9ef",
+      "ParentId": "",
+      "ConnectionId": "0HMMEP9C8LRV2",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 1856,
+      "ThreadId": 14
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T10:51:11.2992112+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested the list of Ratings on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "9:51:11 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "a291dc0c-3118-40ab-bc57-6628ae877ed2",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.Home (WebApi3)",
+      "RequestId": "0HMMEP9C8LRV2:00000004",
+      "RequestPath": "/rating/list",
+      "SpanId": "|5a60e6e7-413826a6570ab9ef.",
+      "TraceId": "5a60e6e7-413826a6570ab9ef",
+      "ParentId": "",
+      "ConnectionId": "0HMMEP9C8LRV2",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 1856,
+      "ThreadId": 18
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:14:27.5683980+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:14:27 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 1920,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:17:49.6277391+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:17:49 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 34160,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:22:53.0117088+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:22:53 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 7836,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:28:26.0270131+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:28:26 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 8808,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:29:36.4582156+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User created a new Rating on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:29:36 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "3deb149b-529b-427c-9c8d-c92789c99825",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.AddRating (WebApi3)",
+      "RequestId": "0HMMEPV51VJG7:00000004",
+      "RequestPath": "/rating/add",
+      "SpanId": "|43af9314-4813c3708bcecebd.",
+      "TraceId": "43af9314-4813c3708bcecebd",
+      "ParentId": "",
+      "ConnectionId": "0HMMEPV51VJG7",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 8808,
+      "ThreadId": 4
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:33:15.5819331+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User updated the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 3002,
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:33:15 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "94c36703-6436-45f8-bd95-30566c2d4ebd",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.UpdateRatingt (WebApi3)",
+      "RequestId": "0HMMEPV51VJG7:00000007",
+      "RequestPath": "/rating/update/3002",
+      "SpanId": "|43af9317-4813c3708bcecebd.",
+      "TraceId": "43af9317-4813c3708bcecebd",
+      "ParentId": "",
+      "ConnectionId": "0HMMEPV51VJG7",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 8808,
+      "ThreadId": 19
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:35:05.9090554+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User deleted the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 3002,
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:35:05 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "78a98c48-58d1-4c88-93cf-e7d0a24dcc01",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)",
+      "RequestId": "0HMMEPV51VJG7:00000009",
+      "RequestPath": "/rating/delete/3002",
+      "SpanId": "|43af9319-4813c3708bcecebd.",
+      "TraceId": "43af9319-4813c3708bcecebd",
+      "ParentId": "",
+      "ConnectionId": "0HMMEPV51VJG7",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 8808,
+      "ThreadId": 19
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:43:49.0414754+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:43:49 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 7104,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:44:10.6287699+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested to delete the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 3010,
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:44:10 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "ef55e3e3-727c-4774-87a5-b8c02d301d57",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)",
+      "RequestId": "0HMMEQ7O3IC0M:00000003",
+      "RequestPath": "/rating/delete/3010",
+      "SpanId": "|cc403e3c-499fdaf88943dda9.",
+      "TraceId": "cc403e3c-499fdaf88943dda9",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQ7O3IC0M",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 7104,
+      "ThreadId": 13
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:44:10.6347418+01:00",
+    "Level": "Error",
+    "MessageTemplate": "No Rating with Id = {Id} was found. User was advised to enter a valid Id.",
+    "Properties": {
+      "Id": 3010,
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "ef55e3e3-727c-4774-87a5-b8c02d301d57",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)",
+      "RequestId": "0HMMEQ7O3IC0M:00000003",
+      "RequestPath": "/rating/delete/3010",
+      "SpanId": "|cc403e3c-499fdaf88943dda9.",
+      "TraceId": "cc403e3c-499fdaf88943dda9",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQ7O3IC0M",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 7104,
+      "ThreadId": 13
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:55:47.6381104+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:55:47 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 1
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:57:26.1936383+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User created a new Rating on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:57:26 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "09933cc8-6a2c-436f-93a1-b6cf4d9df2eb",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.AddRating (WebApi3)",
+      "RequestId": "0HMMEQEE9FT2N:00000004",
+      "RequestPath": "/rating/add",
+      "SpanId": "|89c817d2-41f1f9557153aa9d.",
+      "TraceId": "89c817d2-41f1f9557153aa9d",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQEE9FT2N",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 13
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:58:22.5954698+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User updated the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 3003,
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:58:22 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "5dd33e17-19b0-4114-b010-b0f0265b3afd",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.UpdateRatingt (WebApi3)",
+      "RequestId": "0HMMEQEE9FT2N:00000006",
+      "RequestPath": "/rating/update/3003",
+      "SpanId": "|89c817d4-41f1f9557153aa9d.",
+      "TraceId": "89c817d4-41f1f9557153aa9d",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQEE9FT2N",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 23
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:58:49.6689226+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested to delete the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 3004,
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:58:49 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "1f725cec-a196-4d96-862a-7d6e0074aa30",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)",
+      "RequestId": "0HMMEQEE9FT2N:00000007",
+      "RequestPath": "/rating/delete/3004",
+      "SpanId": "|89c817d5-41f1f9557153aa9d.",
+      "TraceId": "89c817d5-41f1f9557153aa9d",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQEE9FT2N",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 13
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:58:49.6712754+01:00",
+    "Level": "Error",
+    "MessageTemplate": "No Rating with Id = {Id} was found. User was advised to enter a valid Id.",
+    "Properties": {
+      "Id": 3004,
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "1f725cec-a196-4d96-862a-7d6e0074aa30",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)",
+      "RequestId": "0HMMEQEE9FT2N:00000007",
+      "RequestPath": "/rating/delete/3004",
+      "SpanId": "|89c817d5-41f1f9557153aa9d.",
+      "TraceId": "89c817d5-41f1f9557153aa9d",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQEE9FT2N",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 13
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:59:25.4345713+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User requested to update the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 3004,
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:59:25 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "5dd33e17-19b0-4114-b010-b0f0265b3afd",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.UpdateRatingt (WebApi3)",
+      "RequestId": "0HMMEQEE9FT2N:00000009",
+      "RequestPath": "/rating/update/3004",
+      "SpanId": "|89c817d7-41f1f9557153aa9d.",
+      "TraceId": "89c817d7-41f1f9557153aa9d",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQEE9FT2N",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 13
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:59:25.4381889+01:00",
+    "Level": "Error",
+    "MessageTemplate": "No Rating with Id = {Id} was found. User was advised to enter a valid Id.",
+    "Properties": {
+      "Id": 3004,
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "5dd33e17-19b0-4114-b010-b0f0265b3afd",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.UpdateRatingt (WebApi3)",
+      "RequestId": "0HMMEQEE9FT2N:00000009",
+      "RequestPath": "/rating/update/3004",
+      "SpanId": "|89c817d7-41f1f9557153aa9d.",
+      "TraceId": "89c817d7-41f1f9557153aa9d",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQEE9FT2N",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 13
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T11:59:55.6656559+01:00",
+    "Level": "Information",
+    "MessageTemplate": "User deleted the Rating with Id = {Id} on {Date} at {Time}",
+    "Properties": {
+      "Id": 3003,
+      "Date": "Friday, November 25, 2022",
+      "Time": "10:59:55 AM",
+      "SourceContext": "Dot.Net.WebApi.Controllers.RatingController",
+      "ActionId": "1f725cec-a196-4d96-862a-7d6e0074aa30",
+      "ActionName": "Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)",
+      "RequestId": "0HMMEQEE9FT2N:0000000A",
+      "RequestPath": "/rating/delete/3003",
+      "SpanId": "|89c817d8-41f1f9557153aa9d.",
+      "TraceId": "89c817d8-41f1f9557153aa9d",
+      "ParentId": "",
+      "ConnectionId": "0HMMEQEE9FT2N",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 28552,
+      "ThreadId": 10
+    }
+  }
+  {
+    "Timestamp": "2022-11-25T12:11:19.6418901+01:00",
+    "Level": "Warning",
+    "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+    "Properties": {
+      "Date": "Friday, November 25, 2022",
+      "Time": "11:11:19 AM",
+      "MachineName": "DESKTOP-PASCREA",
+      "ProcessId": 18576,
+      "ThreadId": 1
+    }
+  }
+}
+{"Timestamp":"2022-11-25T15:17:57.5777721+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:17:57 PM","MachineName":"DESKTOP-PASCREA","ProcessId":13180,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:18:25.2498799+01:00","Level":"Information","MessageTemplate":"User created a new Rating on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:18:25 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"0f84978b-22bc-4787-829f-958658146022","ActionName":"Dot.Net.WebApi.Controllers.RatingController.AddRating (WebApi3)","RequestId":"0HMMETVD889O9:00000003","RequestPath":"/rating/add","SpanId":"|3c809fcf-499714f94de7b1d8.","TraceId":"3c809fcf-499714f94de7b1d8","ParentId":"","ConnectionId":"0HMMETVD889O9","MachineName":"DESKTOP-PASCREA","ProcessId":13180,"ThreadId":17}}
+{"Timestamp":"2022-11-25T15:23:49.8627595+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:23:49 PM","MachineName":"DESKTOP-PASCREA","ProcessId":18660,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:24:04.9788911+01:00","Level":"Information","MessageTemplate":"User created a new Rating on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:24:04 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"455d529a-0de7-4c82-a5b6-4ba7e57a85a5","ActionName":"Dot.Net.WebApi.Controllers.RatingController.AddRating (WebApi3)","RequestId":"0HMMEU2MA1S5J:00000003","RequestPath":"/rating/add","SpanId":"|d451e53a-46d042bb9d03b660.","TraceId":"d451e53a-46d042bb9d03b660","ParentId":"","ConnectionId":"0HMMEU2MA1S5J","MachineName":"DESKTOP-PASCREA","ProcessId":18660,"ThreadId":4}}
+{"Timestamp":"2022-11-25T15:25:06.3275161+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:25:06 PM","MachineName":"DESKTOP-PASCREA","ProcessId":6104,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:29:53.8928718+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:29:53 PM","MachineName":"DESKTOP-PASCREA","ProcessId":21840,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:30:02.6985821+01:00","Level":"Error","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Exception":"System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.\r\n   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)\r\n   at lambda_method(Closure , IServiceProvider , Object[] )\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)","Properties":{"RequestMethod":"POST","RequestPath":"/rating/add","StatusCode":500,"Elapsed":28.2731,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HMMEU62NLGBR:00000003","SpanId":"|a3c8a513-49e80fad68062ef9.","TraceId":"a3c8a513-49e80fad68062ef9","ParentId":"","ConnectionId":"0HMMEU62NLGBR","MachineName":"DESKTOP-PASCREA","ProcessId":21840,"ThreadId":9},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"28.2731"}]}}
+{"Timestamp":"2022-11-25T15:30:02.7606219+01:00","Level":"Error","MessageTemplate":"An unhandled exception has occurred while executing the request.","Exception":"System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.\r\n   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)\r\n   at lambda_method(Closure , IServiceProvider , Object[] )\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)","Properties":{"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HMMEU62NLGBR:00000003","RequestPath":"/rating/add","SpanId":"|a3c8a513-49e80fad68062ef9.","TraceId":"a3c8a513-49e80fad68062ef9","ParentId":"","ConnectionId":"0HMMEU62NLGBR","MachineName":"DESKTOP-PASCREA","ProcessId":21840,"ThreadId":9}}
+{"Timestamp":"2022-11-25T15:34:00.1899025+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:34:00 PM","MachineName":"DESKTOP-PASCREA","ProcessId":11224,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:34:00.7107381+01:00","Level":"Fatal","MessageTemplate":"The Application Failed to Start Correctly.","Exception":"System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: WebApi3.Services.RatingService Lifetime: Scoped ImplementationType: WebApi3.Services.RatingService': Unable to resolve service for type 'WebApi3.Repositories.IRatingRepository' while attempting to activate 'WebApi3.Services.RatingService'.)\r\n ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: WebApi3.Services.RatingService Lifetime: Scoped ImplementationType: WebApi3.Services.RatingService': Unable to resolve service for type 'WebApi3.Repositories.IRatingRepository' while attempting to activate 'WebApi3.Services.RatingService'.\r\n ---> System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Repositories.IRatingRepository' while attempting to activate 'WebApi3.Services.RatingService'.\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)\r\n   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)\r\n   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)\r\n   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()\r\n   at Microsoft.Extensions.Hosting.HostBuilder.Build()\r\n   at Dot.Net.WebApi.Program.Main(String[] args) in C:\\Users\\Gaetan\\source\\repos\\DotNetEnglishP7_ter\\src\\Program.cs:line 28","Properties":{"MachineName":"DESKTOP-PASCREA","ProcessId":11224,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:37:24.7968537+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:37:24 PM","MachineName":"DESKTOP-PASCREA","ProcessId":13352,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:37:33.9642839+01:00","Level":"Error","MessageTemplate":"HTTP {RequestMethod} {RequestPath} responded {StatusCode} in {Elapsed:0.0000} ms","Exception":"System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.\r\n   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)\r\n   at lambda_method(Closure , IServiceProvider , Object[] )\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)","Properties":{"RequestMethod":"POST","RequestPath":"/rating/add","StatusCode":500,"Elapsed":30.435,"SourceContext":"Serilog.AspNetCore.RequestLoggingMiddleware","RequestId":"0HMMEUA961AKR:00000003","SpanId":"|1e9717f9-4cf7d78dff08159c.","TraceId":"1e9717f9-4cf7d78dff08159c","ParentId":"","ConnectionId":"0HMMEUA961AKR","MachineName":"DESKTOP-PASCREA","ProcessId":13352,"ThreadId":10},"Renderings":{"Elapsed":[{"Format":"0.0000","Rendering":"30.4350"}]}}
+{"Timestamp":"2022-11-25T15:37:34.0129813+01:00","Level":"Error","MessageTemplate":"An unhandled exception has occurred while executing the request.","Exception":"System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Services.RatingService' while attempting to activate 'Dot.Net.WebApi.Controllers.RatingController'.\r\n   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)\r\n   at lambda_method(Closure , IServiceProvider , Object[] )\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()\r\n--- End of stack trace from previous location where exception was thrown ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)","Properties":{"EventId":{"Id":1,"Name":"UnhandledException"},"SourceContext":"Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware","RequestId":"0HMMEUA961AKR:00000003","RequestPath":"/rating/add","SpanId":"|1e9717f9-4cf7d78dff08159c.","TraceId":"1e9717f9-4cf7d78dff08159c","ParentId":"","ConnectionId":"0HMMEUA961AKR","MachineName":"DESKTOP-PASCREA","ProcessId":13352,"ThreadId":10}}
+{"Timestamp":"2022-11-25T15:38:01.4988613+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:38:01 PM","MachineName":"DESKTOP-PASCREA","ProcessId":28548,"ThreadId":1}}
+{"Timestamp":"2022-11-25T15:38:24.5017382+01:00","Level":"Information","MessageTemplate":"User created a new Rating on {Date} at {Time}","Properties":{"Date":"Friday, November 25, 2022","Time":"2:38:24 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"2c090937-5adc-4a41-a9f8-99bedb1815bb","ActionName":"Dot.Net.WebApi.Controllers.RatingController.AddRating (WebApi3)","RequestId":"0HMMEUAK2DSCQ:00000004","RequestPath":"/rating/add","SpanId":"|92271c2c-45942db0635c6048.","TraceId":"92271c2c-45942db0635c6048","ParentId":"","ConnectionId":"0HMMEUAK2DSCQ","MachineName":"DESKTOP-PASCREA","ProcessId":28548,"ThreadId":12}}
+{"Timestamp":"2022-11-25T15:38:52.5276134+01:00","Level":"Information","MessageTemplate":"User requested to delete the Rating with Id = {Id} on {Date} at {Time}","Properties":{"Id":30010,"Date":"Friday, November 25, 2022","Time":"2:38:52 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"e10d4668-ed5e-4153-9d53-cad1677511c6","ActionName":"Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)","RequestId":"0HMMEUAK2DSCQ:00000005","RequestPath":"/rating/delete/30010","SpanId":"|92271c2d-45942db0635c6048.","TraceId":"92271c2d-45942db0635c6048","ParentId":"","ConnectionId":"0HMMEUAK2DSCQ","MachineName":"DESKTOP-PASCREA","ProcessId":28548,"ThreadId":12}}
+{"Timestamp":"2022-11-25T15:38:52.5319965+01:00","Level":"Error","MessageTemplate":"No Rating with Id = {Id} was found. User was advised to enter a valid Id.","Properties":{"Id":30010,"SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"e10d4668-ed5e-4153-9d53-cad1677511c6","ActionName":"Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)","RequestId":"0HMMEUAK2DSCQ:00000005","RequestPath":"/rating/delete/30010","SpanId":"|92271c2d-45942db0635c6048.","TraceId":"92271c2d-45942db0635c6048","ParentId":"","ConnectionId":"0HMMEUAK2DSCQ","MachineName":"DESKTOP-PASCREA","ProcessId":28548,"ThreadId":12}}
+{"Timestamp":"2022-11-25T15:39:03.8073674+01:00","Level":"Information","MessageTemplate":"User deleted the Rating with Id = {Id} on {Date} at {Time}","Properties":{"Id":3007,"Date":"Friday, November 25, 2022","Time":"2:39:03 PM","SourceContext":"Dot.Net.WebApi.Controllers.RatingController","ActionId":"e10d4668-ed5e-4153-9d53-cad1677511c6","ActionName":"Dot.Net.WebApi.Controllers.RatingController.DeleteRating (WebApi3)","RequestId":"0HMMEUAK2DSCQ:00000006","RequestPath":"/rating/delete/3007","SpanId":"|92271c2e-45942db0635c6048.","TraceId":"92271c2e-45942db0635c6048","ParentId":"","ConnectionId":"0HMMEUAK2DSCQ","MachineName":"DESKTOP-PASCREA","ProcessId":28548,"ThreadId":4}}

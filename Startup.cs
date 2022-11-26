@@ -35,7 +35,7 @@ namespace Dot.Net.WebApi
                 options.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
 
-            //Add services for CurvePointRepository and LocalBdContext
+            //Add services for Repositories and LocalBdContext
             services.AddScoped<ICurvePointRepository, CurvePointRepository>();
             services.AddScoped<IBidListRepository, BidListRepository>();
             services.AddScoped<IRatingRepository, RatingRepository>();

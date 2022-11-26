@@ -11,13 +11,13 @@ namespace Dot.Net.WebApi.Controllers
     [Route("[controller]")]
     public class RatingController : Controller
     {
-        // TODO: Inject Rating service
-        private readonly IRatingRepository _ratingService; 
+        // TODO: Inject Rating repository
+        private readonly IRatingRepository _ratingRepository; 
         private readonly ILogger<RatingController> _logger;
 
-        public RatingController(IRatingRepository ratingService, ILogger<RatingController> logger)
+        public RatingController(IRatingRepository ratingRepository, ILogger<RatingController> logger)
         {
-            _ratingService = ratingService;
+            _ratingRepository = ratingRepository;
             _logger = logger;
         }
 
@@ -34,14 +34,14 @@ namespace Dot.Net.WebApi.Controllers
             _logger.LogInformation("User requested the list of Ratings on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             // Add Logs with date/time in French standard
             //_logger.LogInformation("User requested the list of Ratings on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
-            var result = _ratingService.GetAllRatings();
+
+            var result = _ratingRepository.GetAllRatings();
             if (result.Result == null)
             {
-                _logger.LogInformation("User requested the list of Ratings on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
-                _logger.LogError("There is no Rating to display");
+                _logger.LogError("There is no Rating to display.");
                 return NotFound("No Rating to display.");
             }
-
+            
             return Ok(result.Result);
         }
 
@@ -57,7 +57,7 @@ namespace Dot.Net.WebApi.Controllers
         {
             _logger.LogInformation("User requested the Rating with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
-            var result = _ratingService.GetSingleRating(id);
+            var result = _ratingRepository.GetSingleRating(id);
             if (result.Result == null)
             {
                 _logger.LogError("No Rating with Id = {Id} was found. User was advised to enter a valid Id.", id);
@@ -75,13 +75,10 @@ namespace Dot.Net.WebApi.Controllers
         [HttpPost("/rating/add")]
         public IActionResult AddRating([FromBody] Rating rating)
         {
-            var result = _ratingService.CreateRating(rating);
-            // If the Rating wasn't validated by the service, return a Bad Request error
+            var result = _ratingRepository.CreateRating(rating);
+            // If the Rating wasn't validated, return a Bad Request error
             if (result is null)
             {
-                // this addition to the logs does not work...
-                //_logger.LogInformation("User requested to create a new Rating on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
-                //_logger.LogError("Rating could not be created. {Error}.", result.Result);
                 return BadRequest(result.Result);
             }
 
@@ -105,7 +102,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("Ids should be identical.");
             }
 
-            var result = _ratingService.UpdateRating(id, rating);
+            var result = _ratingRepository.UpdateRating(id, rating);
             if (result.Result is null)
             {
                 //_logger.LogInformation("User requested to update the Rating with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -127,7 +124,7 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteRating(int id)
         {
-            var result = _ratingService.DeleteRating(id);
+            var result = _ratingRepository.DeleteRating(id);
             if (result.Result == null)
             {
                 _logger.LogInformation("User requested to delete the Rating with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));

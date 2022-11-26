@@ -9,15 +9,15 @@ using WebApi3.Repositories;
 namespace Dot.Net.WebApi.Controllers
 {
     [Route("[controller]")]
-    public class CurveController : Controller
+    public class CurvePointController : Controller
     {
-        // TODO: Inject Curve Point service
-        private readonly ICurvePointRepository _curvePointService;
-        private readonly ILogger<CurveController> _logger;
+        // TODO: Inject Curve Point repository
+        private readonly ICurvePointRepository _curvePointRepository;
+        private readonly ILogger<CurvePointController> _logger;
 
-        public CurveController(ICurvePointRepository curvePointService, ILogger<CurveController> logger)
+        public CurvePointController(ICurvePointRepository curvePointRepository, ILogger<CurvePointController> logger)
         {
-            _curvePointService = curvePointService;
+            _curvePointRepository = curvePointRepository;
             _logger = logger;
         }
 
@@ -34,9 +34,11 @@ namespace Dot.Net.WebApi.Controllers
             _logger.LogInformation("User requested the list of CurvePoints on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             // Add Logs with date/time in French standard
             //_logger.LogInformation("User requested the list of CurvePoints on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
-            var result = _curvePointService.GetAllCurvePoints();
+           
+            var result = _curvePointRepository.GetAllCurvePoints();
             if (result.Result == null)
             {
+                _logger.LogError("There is no CurvePoint to display.");
                 return NotFound("No CurvePoints to display.");
             }
 
@@ -55,9 +57,10 @@ namespace Dot.Net.WebApi.Controllers
         {
             _logger.LogInformation("User requested the CurvePoint with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
-            var result = _curvePointService.GetSingleCurvePoint(id);
+            var result = _curvePointRepository.GetSingleCurvePoint(id);
             if (result.Result == null)
             {
+                _logger.LogError("No CurvePoint with Id = {Id} was found. User was advised to enter a valid Id.", id);
                 return NotFound("CurvePoint not found. Enter an valid Id.");
             }
             
@@ -65,20 +68,21 @@ namespace Dot.Net.WebApi.Controllers
         }
 
         /// <summary>
-        /// Method to add a curvePoint if the data is valid
+        /// Method to add a CurvePoint if the data is valid
         /// </summary>
         /// <param name="curvePoint"></param>
         /// <returns></returns>
         [HttpPost("/curvePoint/add")]
         public IActionResult AddCurvePoint([FromBody]CurvePointDTO curvePointDTO)
         {
-            _logger.LogInformation("User created a new CurvePoint on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
-            var result = _curvePointService.CreateCurvePoint(curvePointDTO);
-            // If the curvePoint wasn't validated by the service, return a Bad Request error
+            var result = _curvePointRepository.CreateCurvePoint(curvePointDTO);
+            // If the curvePoint wasn't validated, return a Bad Request error
             if (result is null)
             {
-                return BadRequest();
+                return BadRequest(result.Result);
             }
+
+            _logger.LogInformation("User created a new CurvePoint on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -89,7 +93,6 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="curvePointDTO"></param>
         /// <returns></returns>
         [HttpPut("/CurvePoint/update/{id}")]
-        //[ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult UpdateCurvePoint(int id, [FromBody]CurvePointDTO curvePointDTO)
@@ -99,7 +102,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("Ids should be identical.");
             }
 
-            var result = _curvePointService.UpdateCurvePoint(id, curvePointDTO);
+            var result = _curvePointRepository.UpdateCurvePoint(id, curvePointDTO);
             if (result.Result is null)
             {
                 return BadRequest("CurvePoint not found."); 
@@ -119,46 +122,16 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteCurvePoint(int id)
         {
-            var result = _curvePointService.DeleteCurvePoint(id);
+            var result = _curvePointRepository.DeleteCurvePoint(id);
             if (result.Result == null)
             {
+                _logger.LogInformation("User requested to delete the CurvePoint with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogError("No CurvePoint with Id = {Id} was found. User was advised to enter a valid Id.", id);
                 return NotFound("CurvePoint not found.");
             }
 
             _logger.LogInformation("User deleted the CurvePoint with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
-
-
-
-        //ORIGINAL CODE
-        //[HttpGet("/curvePoint/add")]
-        //public IActionResult Validate([FromBody]CurvePoint curvePoint)
-        //{
-        //    // TODO: check data valid and save to db, after saving return bid list
-        //    return View("curvePoint/add"    );
-        //}
-
-        //[HttpGet("/curvePoint/update/{id}")]
-        //public IActionResult ShowUpdateForm(int id)
-        //{
-        //    // TODO: get CurvePoint by Id and to model then show to the form
-        //    return View("curvepoint/update");
-        //}
-
-        //[HttpPost("/curvepoint/update/{id}")]
-        //public IActionResult UpdateCurvePoint(int id, [FromBody] CurvePoint curvePoint)
-        //{
-        //    // TODO: check required fields, if valid call service to update Curve and return Curve list
-        //    return Redirect("/curvepoint/list");
-        //}
-
-        //[HttpDelete("/curvepoint/{id}")]
-        //public IActionResult DeleteBid(int id)
-        //{
-        //    // TODO: Find Curve by Id and delete the Curve, return to Curve list
-
-        //    return Redirect("/curvePoint/list");
-        //}
     }
 }

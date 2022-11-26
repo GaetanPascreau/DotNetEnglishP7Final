@@ -12,13 +12,13 @@ namespace Dot.Net.WebApi.Controllers
     [Route("[controller]")]
     public class BidListController : Controller
     {
-        // TODO: Inject Curve Point service
-        private readonly IBidListRepository _bidListService;
+        // TODO: Inject BidList repository
+        private readonly IBidListRepository _bidListRepository;
         private readonly ILogger<BidListController> _logger;
 
-        public BidListController(IBidListRepository bidListService, ILogger<BidListController> logger)
+        public BidListController(IBidListRepository bidListRepository, ILogger<BidListController> logger)
         {
-            _bidListService = bidListService;
+            _bidListRepository = bidListRepository;
             _logger = logger;
         }
 
@@ -32,12 +32,14 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult Home()
         {
             // Add Logs with date/time in US standard
-            _logger.LogInformation("User requested the list of CurvePoints on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the list of BidList on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             // Add Logs with date/time in French standard
             //_logger.LogInformation("User requested the list of BidList on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
-            var result = _bidListService.GetAllBidLists();
+            
+            var result = _bidListRepository.GetAllBidLists();
             if (result.Result == null)
             {
+                _logger.LogError("There is no BidList to display.");
                 return NotFound("No BidList to display.");
             }
 
@@ -56,9 +58,10 @@ namespace Dot.Net.WebApi.Controllers
         {
             _logger.LogInformation("User requested the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
-            var result = _bidListService.GetSingleBidList(id);
+            var result = _bidListRepository.GetSingleBidList(id);
             if (result.Result == null)
             {
+                _logger.LogError("No BidList with Id = {Id} was found. User was advised to enter a valid Id.", id);
                 return NotFound("BidList not found. Enter an valid Id.");
             }
 
@@ -73,13 +76,14 @@ namespace Dot.Net.WebApi.Controllers
         [HttpPost("/bidList/add")]
         public IActionResult AddBidList([FromBody] BidListDTO bidListDTO)
         {
-            _logger.LogInformation("User created a new CurvePoint on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
-            var result = _bidListService.CreateBidList(bidListDTO);
+            var result = _bidListRepository.CreateBidList(bidListDTO);
             // If the BidList wasn't validated by the service, return a Bad Request error
             if (result is null)
             {
                 return BadRequest();
             }
+
+            _logger.LogInformation("User created a new BidList on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -90,7 +94,6 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="bidListDTO"></param>
         /// <returns></returns>
         [HttpPut("/bidList/update/{id}")]
-        //[ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult UpdateCurvePoint(int id, [FromBody] BidListDTO bidListDTO)
@@ -100,7 +103,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("Ids should be identical.");
             }
 
-            var result = _bidListService.UpdateBidList(id, bidListDTO);
+            var result = _bidListRepository.UpdateBidList(id, bidListDTO);
             if (result.Result is null)
             {
                 return BadRequest("BidList not found.");
@@ -120,10 +123,12 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteBidList(int id)
         {
-            var result = _bidListService.DeleteBidList(id);
+            var result = _bidListRepository.DeleteBidList(id);
             if (result.Result == null)
             {
-                return NotFound("BidList not found.");
+                _logger.LogInformation("User requested to delete the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogError("No BidList with Id = {Id} was found. User was advised to enter a valid Id.", id);
+                return NotFound("BidList not found. Please enter a vlid Id.");
             }
 
             _logger.LogInformation("User deleted the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));

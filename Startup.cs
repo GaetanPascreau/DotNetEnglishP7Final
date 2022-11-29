@@ -40,6 +40,7 @@ namespace Dot.Net.WebApi
             services.AddScoped<IBidListRepository, BidListRepository>();
             services.AddScoped<IRatingRepository, RatingRepository>();
             services.AddScoped<IRuleNameRepository, RuleNameRepository>();
+            services.AddScoped<ITradeRepository, TradeRepository>();
 
             services.AddDbContext<LocalDbContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

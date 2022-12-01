@@ -41,6 +41,8 @@ namespace Dot.Net.WebApi
             services.AddScoped<IRatingRepository, RatingRepository>();
             services.AddScoped<IRuleNameRepository, RuleNameRepository>();
             services.AddScoped<ITradeRepository, TradeRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
 
             services.AddDbContext<LocalDbContext>(options =>
                  options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));

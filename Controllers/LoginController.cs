@@ -1,6 +1,6 @@
-using Dot.Net.WebApi.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using WebApi3.Domain;
+using WebApi3.Repositories;
 
 namespace Dot.Net.WebApi.Controllers
 {
@@ -23,7 +23,7 @@ namespace Dot.Net.WebApi.Controllers
         [HttpGet("/secure/article-details")]
         public IActionResult GetAllUserArticles()
         {
-            return View(_userRepository.FindAll());
+            return View(_userRepository.GetAllUsers());
         }
 
         [HttpGet("/error")]

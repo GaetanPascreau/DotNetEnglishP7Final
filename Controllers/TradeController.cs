@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Globalization;
-using WebApi3.Domain;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
 

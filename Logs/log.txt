@@ -279,3 +279,43 @@ System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Se
 11/29/2022 20:25:28 User deleted the Trade with Id = 1010 on "Tuesday, November 29, 2022" at "7:25:28 PM"
 11/29/2022 20:32:18 Application Starting Up on "Tuesday, November 29, 2022" at "7:32:18 PM"
 11/29/2022 20:34:13 User created a new Trade on "Tuesday, November 29, 2022" at "7:34:13 PM"
+12/01/2022 20:03:57 Application Starting Up on "Thursday, December 1, 2022" at "7:03:57 PM"
+12/01/2022 20:04:17 User requested the list of Users on "Thursday, December 1, 2022" at "7:04:17 PM"
+12/01/2022 20:04:32 HTTP "GET" "/user/1" responded 500 in 10.1487 ms
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUser (WebApi3)
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUserByUserName (WebApi3)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+12/01/2022 20:04:33 An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUser (WebApi3)
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUserByUserName (WebApi3)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+12/01/2022 20:06:04 Application Starting Up on "Thursday, December 1, 2022" at "7:06:04 PM"
+12/01/2022 20:06:14 User requested the User with Id = 1 on "Thursday, December 1, 2022" at "7:06:14 PM"
+12/01/2022 20:06:20 User requested the User with Id = 5 on "Thursday, December 1, 2022" at "7:06:20 PM"
+12/01/2022 20:06:20 No User with Id = 5 was found. User was advised to enter a valid Id.
+12/01/2022 20:06:33 User requested the list of Users on "Thursday, December 1, 2022" at "7:06:33 PM"
+12/01/2022 20:06:51 User requested the User with UserName = "{UserName}" on "Thursday, December 1, 2022" at "7:06:51 PM"
+12/01/2022 20:06:51 No User with UserName = "{UserName}" was found. User was advised to enter a valid UserName.
+12/01/2022 20:06:58 User requested the User with UserName = "{UserName}" on "Thursday, December 1, 2022" at "7:06:58 PM"
+12/01/2022 20:06:58 No User with UserName = "{UserName}" was found. User was advised to enter a valid UserName.
+12/01/2022 20:07:11 User requested the User with UserName = "{UserName}" on "Thursday, December 1, 2022" at "7:07:11 PM"
+12/01/2022 20:07:11 No User with UserName = "{UserName}" was found. User was advised to enter a valid UserName.
+12/01/2022 20:08:18 User requested the User with UserName = "{UserName}" on "Thursday, December 1, 2022" at "7:08:18 PM"
+12/01/2022 20:08:18 No User with UserName = "{UserName}" was found. User was advised to enter a valid UserName.

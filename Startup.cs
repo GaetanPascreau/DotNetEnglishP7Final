@@ -42,6 +42,7 @@ namespace Dot.Net.WebApi
             services.AddScoped<IRuleNameRepository, RuleNameRepository>();
             services.AddScoped<ITradeRepository, TradeRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ILoginRepository, LoginRepository>();
 
 
             services.AddDbContext<LocalDbContext>(options =>

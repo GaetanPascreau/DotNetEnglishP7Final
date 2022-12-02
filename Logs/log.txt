@@ -770,3 +770,6 @@ System.InvalidOperationException: Unable to resolve service for type 'WebApi3.Re
 12/02/2022 17:58:34 Application Starting Up on "Friday, December 2, 2022" at "4:58:34 PM"
 12/02/2022 17:59:59 Application Starting Up on "Friday, December 2, 2022" at "4:59:59 PM"
 12/02/2022 18:00:36 Application Starting Up on "Friday, December 2, 2022" at "5:00:36 PM"
+12/02/2022 18:21:40 Application Starting Up on "Friday, December 2, 2022" at "5:21:40 PM"
+12/02/2022 18:24:53 User created a new User on "Friday, December 2, 2022" at "5:24:53 PM"
+12/02/2022 18:39:21 Application Starting Up on "Friday, December 2, 2022" at "5:39:21 PM"

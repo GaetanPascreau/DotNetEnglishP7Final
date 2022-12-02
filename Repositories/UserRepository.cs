@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Helpers;
 using WebApi3.Domain;
 using WebApi3.Domain.DTO;
 
@@ -74,12 +75,14 @@ namespace WebApi3.Repositories
         /// <returns></returns>
         public async Task<List<UserDTO>> CreateUser(UserDTO userDTO)
         {
+            // Hash password
+            var hashedPassword = Crypto.HashPassword(userDTO.Password);
             // Create new User 
             var user = new User
             {
                 Id = userDTO.Id,
                 UserName = userDTO.UserName,
-                Password = userDTO.Password,
+                Password = hashedPassword,
                 FullName = userDTO.FullName
             };
 
@@ -106,8 +109,11 @@ namespace WebApi3.Repositories
                 return null;
             }
 
+            // Hash password
+            var hashedPassword = Crypto.HashPassword(userDTO.Password);
+
             userToUpdate.UserName = userDTO.UserName;
-            userToUpdate.Password = userDTO.Password;
+            userToUpdate.Password = hashedPassword;
             userToUpdate.FullName = userDTO.FullName;
 
             await _context.SaveChangesAsync();

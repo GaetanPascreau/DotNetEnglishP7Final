@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Helpers;
 
 namespace WebApi3.Repositories
 {
@@ -22,9 +23,19 @@ namespace WebApi3.Repositories
         public bool Login(string userName, string password)
         {
             // get a UserName and Password from the user and compare them to User info from the database 
-            var user = _context.Users.SingleOrDefault(u => u.UserName == userName && u.Password == password);
+            //var user = _context.Users.SingleOrDefault(u => u.UserName == userName && u.Password == password);
 
-            if (user == null)
+            //if (user == null)
+            //{
+            //    return false;
+            //}
+
+            //return true;
+
+            var user = _context.Users.SingleOrDefault(u => u.UserName == userName);
+            var hashedPassword = user.Password;
+            var IsPasswordCorrect = Crypto.VerifyHashedPassword(hashedPassword, password);
+            if (user == null || !IsPasswordCorrect)
             {
                 return false;
             }

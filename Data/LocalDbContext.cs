@@ -1,6 +1,4 @@
-using System;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using WebApi3.Domain;
 
 namespace Dot.Net.WebApi.Data

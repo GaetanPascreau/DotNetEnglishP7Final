@@ -41,7 +41,7 @@ namespace WebApi3.Repositories
         /// <returns></returns>
         public async Task<TradeDTO> GetSingleTrade(int id)
         {
-            var trade = await _context.Trade.SingleOrDefaultAsync(rn => rn.TradeId == id);
+            var trade = await _context.Trade.SingleOrDefaultAsync(t => t.TradeId == id);
             if (trade is null)
             {
                 return null;

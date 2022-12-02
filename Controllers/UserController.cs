@@ -72,17 +72,17 @@ namespace Dot.Net.WebApi.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpGet("/user/userName/{UserName}")]
+        [HttpGet("/userByUserName/")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificUserByUserName(string userName)
         {
-            _logger.LogInformation("User requested the User with UserName = {UserName} on {Date} at {Time}", userName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the User with UserName {UserName} on {Date} at {Time}", userName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
             var result = _userRepository.GetSingleUserByUserName(userName);
             if (result.Result == null)
             {
-                _logger.LogError("No User with UserName = {UserName} was found. User was advised to enter a valid UserName.", userName);
+                _logger.LogError("No User with UserName {UserName} was found. User was advised to enter a valid UserName.", userName);
                 return NotFound("User not found. Enter an valid UserName.");
             }
 

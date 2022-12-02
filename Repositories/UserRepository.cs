@@ -54,11 +54,11 @@ namespace WebApi3.Repositories
         /// then converts it into a list of UserDTO (showing less properties)
         /// then returning it (to the Service)
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="userName"></param>
         /// <returns></returns>
         public async Task<UserDTO> GetSingleUserByUserName(string userName)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+            var user = await _context.Users.SingleOrDefaultAsync(u => u.UserName == userName);
             if (user is null)
             {
                 return null;

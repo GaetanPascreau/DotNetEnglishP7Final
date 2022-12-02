@@ -319,3 +319,96 @@ Dot.Net.WebApi.Controllers.UserController.GetSpecificUserByUserName (WebApi3)
 12/01/2022 20:07:11 No User with UserName = "{UserName}" was found. User was advised to enter a valid UserName.
 12/01/2022 20:08:18 User requested the User with UserName = "{UserName}" on "Thursday, December 1, 2022" at "7:08:18 PM"
 12/01/2022 20:08:18 No User with UserName = "{UserName}" was found. User was advised to enter a valid UserName.
+12/02/2022 09:23:36 Application Starting Up on "Friday, December 2, 2022" at "8:23:36 AM"
+12/02/2022 09:24:21 User requested the User with UserName "{UserName}" on "Friday, December 2, 2022" at "8:24:21 AM"
+12/02/2022 09:24:21 No User with UserName "{UserName}" was found. User was advised to enter a valid UserName.
+12/02/2022 09:25:21 User requested the User with Id = 1 on "Friday, December 2, 2022" at "8:25:21 AM"
+12/02/2022 09:28:06 User requested the User with UserName "{UserName}" on "Friday, December 2, 2022" at "8:28:06 AM"
+12/02/2022 09:29:04 User requested the User with Id = 2 on "Friday, December 2, 2022" at "8:29:04 AM"
+12/02/2022 09:29:07 No User with UserName "{UserName}" was found. User was advised to enter a valid UserName.
+12/02/2022 09:31:04 Application Starting Up on "Friday, December 2, 2022" at "8:31:04 AM"
+12/02/2022 09:31:52 User requested the User with UserName null on "Friday, December 2, 2022" at "8:31:52 AM"
+12/02/2022 09:32:13 No User with UserName null was found. User was advised to enter a valid UserName.
+12/02/2022 09:32:40 User requested the User with UserName "user" on "Friday, December 2, 2022" at "8:32:40 AM"
+12/02/2022 09:35:14 User requested the User with UserName "user" on "Friday, December 2, 2022" at "8:35:14 AM"
+12/02/2022 09:36:18 Application Starting Up on "Friday, December 2, 2022" at "8:36:18 AM"
+12/02/2022 09:36:54 User requested the User with UserName "{UserName}" on "Friday, December 2, 2022" at "8:36:54 AM"
+12/02/2022 09:36:59 No User with UserName "{UserName}" was found. User was advised to enter a valid UserName.
+12/02/2022 09:37:47 Application Starting Up on "Friday, December 2, 2022" at "8:37:47 AM"
+12/02/2022 09:38:00 HTTP "GET" "/user/{UserName}" responded 500 in 8.8285 ms
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUser (WebApi3)
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUserByUserName (WebApi3)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+12/02/2022 09:38:00 An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUser (WebApi3)
+Dot.Net.WebApi.Controllers.UserController.GetSpecificUserByUserName (WebApi3)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+12/02/2022 09:39:27 Application Starting Up on "Friday, December 2, 2022" at "8:39:27 AM"
+12/02/2022 09:39:59 User requested the User with UserName "{UserName}" on "Friday, December 2, 2022" at "8:39:59 AM"
+12/02/2022 09:40:06 No User with UserName "{UserName}" was found. User was advised to enter a valid UserName.
+12/02/2022 09:41:27 Application Starting Up on "Friday, December 2, 2022" at "8:41:27 AM"
+12/02/2022 09:42:01 User requested the User with UserName null on "Friday, December 2, 2022" at "8:42:01 AM"
+12/02/2022 09:42:02 No User with UserName null was found. User was advised to enter a valid UserName.
+12/02/2022 10:09:31 Application Starting Up on "Friday, December 2, 2022" at "9:09:31 AM"
+12/02/2022 10:10:03 User requested the User with UserName "admin" on "Friday, December 2, 2022" at "9:10:03 AM"
+12/02/2022 10:10:48 User requested the User with UserName "admin" on "Friday, December 2, 2022" at "9:10:48 AM"
+12/02/2022 10:14:09 Application Starting Up on "Friday, December 2, 2022" at "9:14:09 AM"
+12/02/2022 10:14:44 User requested the User with UserName "admin" on "Friday, December 2, 2022" at "9:14:44 AM"
+12/02/2022 10:33:46 User requested the User with UserName null on "Friday, December 2, 2022" at "9:33:46 AM"
+12/02/2022 10:33:58 No User with UserName null was found. User was advised to enter a valid UserName.
+12/02/2022 10:37:31 User requested the list of Users on "Friday, December 2, 2022" at "9:37:31 AM"
+12/02/2022 10:37:54 User requested the User with Id = 2 on "Friday, December 2, 2022" at "9:37:54 AM"
+12/02/2022 10:38:12 User requested the User with Id = 5 on "Friday, December 2, 2022" at "9:38:12 AM"
+12/02/2022 10:38:13 No User with Id = 5 was found. User was advised to enter a valid Id.
+12/02/2022 10:38:43 User requested the User with UserName "Test" on "Friday, December 2, 2022" at "9:38:43 AM"
+12/02/2022 10:39:04 User requested the User with UserName "toto" on "Friday, December 2, 2022" at "9:39:04 AM"
+12/02/2022 10:39:07 No User with UserName "toto" was found. User was advised to enter a valid UserName.
+12/02/2022 10:41:34 User created a new User on "Friday, December 2, 2022" at "9:41:34 AM"
+12/02/2022 10:41:54 User created a new User on "Friday, December 2, 2022" at "9:41:54 AM"
+12/02/2022 10:45:44 User created a new User on "Friday, December 2, 2022" at "9:45:44 AM"
+12/02/2022 10:47:18 Application Starting Up on "Friday, December 2, 2022" at "9:47:18 AM"
+12/02/2022 10:49:12 User created a new User on "Friday, December 2, 2022" at "9:49:12 AM"
+12/02/2022 10:50:17 User requested the User with UserName "tata" on "Friday, December 2, 2022" at "9:50:17 AM"
+12/02/2022 10:50:33 User requested the User with UserName "toto" on "Friday, December 2, 2022" at "9:50:33 AM"
+12/02/2022 10:50:35 No User with UserName "toto" was found. User was advised to enter a valid UserName.
+12/02/2022 10:50:46 User requested the User with UserName null on "Friday, December 2, 2022" at "9:50:46 AM"
+12/02/2022 10:51:24 User deleted the User with Id = 1005 on "Friday, December 2, 2022" at "9:51:24 AM"
+12/02/2022 10:51:43 User requested to delete the User with Id = 1010 on "Friday, December 2, 2022" at "9:51:43 AM"
+12/02/2022 10:51:43 No User with Id = 1010 was found. User was advised to enter a valid Id.
+12/02/2022 10:52:01 User deleted the User with Id = 1003 on "Friday, December 2, 2022" at "9:52:01 AM"
+12/02/2022 10:52:14 User requested the User with UserName null on "Friday, December 2, 2022" at "9:52:14 AM"
+12/02/2022 10:52:15 No User with UserName null was found. User was advised to enter a valid UserName.
+12/02/2022 10:52:56 Application Starting Up on "Friday, December 2, 2022" at "9:52:56 AM"
+12/02/2022 10:53:17 User requested the User with UserName "{UserName}" on "Friday, December 2, 2022" at "9:53:17 AM"
+12/02/2022 10:53:21 No User with UserName "{UserName}" was found. User was advised to enter a valid UserName.
+12/02/2022 10:53:44 Application Starting Up on "Friday, December 2, 2022" at "9:53:44 AM"
+12/02/2022 10:54:09 Application Starting Up on "Friday, December 2, 2022" at "9:54:09 AM"
+12/02/2022 10:54:31 User requested the User with UserName "Test" on "Friday, December 2, 2022" at "9:54:31 AM"
+12/02/2022 10:54:46 User requested the list of Users on "Friday, December 2, 2022" at "9:54:46 AM"
+12/02/2022 10:56:14 User updated the User with Id = 1004 on "Friday, December 2, 2022" at "9:56:14 AM"
+12/02/2022 10:56:29 User requested the list of Users on "Friday, December 2, 2022" at "9:56:29 AM"
+12/02/2022 11:42:54 Application Starting Up on "Friday, December 2, 2022" at "10:42:54 AM"
+12/02/2022 11:53:19 Application Starting Up on "Friday, December 2, 2022" at "10:53:19 AM"
+12/02/2022 11:54:31 User created a new User on "Friday, December 2, 2022" at "10:54:31 AM"
+12/02/2022 12:00:17 Application Starting Up on "Friday, December 2, 2022" at "11:00:17 AM"
+12/02/2022 12:02:36 Application Starting Up on "Friday, December 2, 2022" at "11:02:36 AM"
+12/02/2022 12:03:37 Application Starting Up on "Friday, December 2, 2022" at "11:03:37 AM"
+12/02/2022 12:13:29 Application Starting Up on "Friday, December 2, 2022" at "11:13:29 AM"
+12/02/2022 12:14:38 User created a new User on "Friday, December 2, 2022" at "11:14:38 AM"

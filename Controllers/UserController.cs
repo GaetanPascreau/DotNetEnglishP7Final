@@ -95,13 +95,15 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="usern"></param>
         /// <returns></returns>
         [HttpPost("/user/add")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult AddUser([FromBody] UserDTO userDTO)
         {
             var result = _userRepository.CreateUser(userDTO);
-            // If the User wasn't validated, return a Bad Request error
-            if (result is null)
+            // If the User wasn't validated, or if that user already exists in database, return a Bad Request error
+            if (result.Result is null)
             {
-                return BadRequest(result.Result);
+                return BadRequest("UserName or FullName is already used");
             }
 
             _logger.LogInformation("User created a new User on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));

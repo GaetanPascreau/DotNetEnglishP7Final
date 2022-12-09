@@ -75,6 +75,14 @@ namespace WebApi3.Repositories
         /// <returns></returns>
         public async Task<List<UserDTO>> CreateUser(UserDTO userDTO)
         {
+            // Check whether the UserName already exist in database. If so, don't create the user.
+            var UserNameInBase = _context.Users.FirstOrDefault(u => u.UserName == userDTO.UserName);
+
+            if (UserNameInBase != null)
+            {
+                return null;
+            }
+
             // Hash password
             var hashedPassword = Crypto.HashPassword(userDTO.Password);
             // Create new User 
@@ -105,6 +113,14 @@ namespace WebApi3.Repositories
         {
             var userToUpdate = _context.Users.Find(id);
             if (userToUpdate is null)
+            {
+                return null;
+            }
+
+            // Check whether the UserName already exist in database. If so, don't update the user.
+            var UserNameInBase = _context.Users.FirstOrDefault(u => u.UserName == userDTO.UserName);
+
+            if (UserNameInBase != null)
             {
                 return null;
             }

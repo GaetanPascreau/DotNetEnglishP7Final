@@ -28,7 +28,7 @@ namespace Dot.Net.WebApi.Controllers
             {
                 return BadRequest("Invalid UserName or Password.");
             }
-            return Ok("you are granted access to the API.");
+            return Ok("Access granted.");
         }
         //[HttpGet("/login")]
         //public IActionResult Login()

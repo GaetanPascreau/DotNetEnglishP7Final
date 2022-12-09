@@ -23,19 +23,14 @@ namespace WebApi3.Repositories
         public bool Login(string userName, string password)
         {
             // get a UserName and Password from the user and compare them to User info from the database 
-            //var user = _context.Users.SingleOrDefault(u => u.UserName == userName && u.Password == password);
-
-            //if (user == null)
-            //{
-            //    return false;
-            //}
-
-            //return true;
-
             var user = _context.Users.SingleOrDefault(u => u.UserName == userName);
+            if (user == null)
+            {
+                return false;
+            }
             var hashedPassword = user.Password;
             var IsPasswordCorrect = Crypto.VerifyHashedPassword(hashedPassword, password);
-            if (user == null || !IsPasswordCorrect)
+            if (!IsPasswordCorrect)
             {
                 return false;
             }

@@ -1,74 +1,66 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApi3.Domain;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
 using WebApi3.Repositories;
+using Microsoft.Extensions.Configuration;
+using System;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace Dot.Net.WebApi.Controllers
 {
     [Route("[controller]")]
     public class LoginController : Controller
     {
-        //private UserRepository _userRepository;
+        public IConfiguration _configuration;
         private readonly ILoginRepository _loginRepository;
 
-        //public LoginController(UserRepository userRepository)
-        //{
-        //    _userRepository = userRepository;
-        //}
-
-        public LoginController(ILoginRepository loginRepository)
+        public LoginController(IConfiguration config, ILoginRepository loginRepository)
         {
+            _configuration = config;
             _loginRepository = loginRepository;
         }
 
         [HttpPost("/login")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult Login(string userName, string password)
         {
-            var result = _loginRepository.Login(userName, password);
-            if(result == false)
+            if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
             {
-                return BadRequest("Invalid UserName or Password.");
+                var loggedInUser = _loginRepository.Login(userName, password);
+
+                if (loggedInUser == null)
+                {
+                    return BadRequest("Invalid UserName or Password.");
+                }
+
+                var claims = new[]
+                {
+                    new Claim(ClaimTypes.NameIdentifier, loggedInUser.UserName),
+                };
+
+                //Define the token
+                var token = new JwtSecurityToken
+                (
+                    issuer: _configuration["Jwt:Issuer"], 
+                    audience: _configuration["Jwt:Audience"],
+                    claims: claims,
+                    expires: DateTime.UtcNow.AddMinutes(15),
+                    notBefore: DateTime.UtcNow,
+                    signingCredentials: new SigningCredentials(
+                        new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])),
+                        SecurityAlgorithms.HmacSha256)
+                );
+
+                var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+                return Ok(tokenString);
+                //return Ok("Access granted.");
             }
-            return Ok("Access granted.");
+
+            return BadRequest("Please enter a UserName and a Password");
         }
-        //[HttpGet("/login")]
-        //public IActionResult Login()
-        //{
-        //    return View("login");
-        //}
-
-        //[HttpGet("/secure/article-details")]
-        //public IActionResult GetAllUserArticles()
-        //{
-        //    return View(_userRepository.GetAllUsers());
-        //}
-
-        //[HttpGet("/error")]
-        //public IActionResult Error()
-        //{
-        //    string errorMessage= "You are not authorized for the requested data.";
-
-        //    return View(new UnauthorizedObjectResult(errorMessage));
-        //}
-
-        ////[HttpGet("/trade/update/{id}")]
-        ////public IActionResult ShowUpdateForm(int id)
-        ////{
-        ////    // TODO: get Trade by Id and to model then show to the form
-        ////    return View("trade/update");
-        ////}
-
-        //[HttpPost("/trade/update/{id}")]
-        //public IActionResult updateTrade(int id, [FromBody] Trade rating)
-        //{
-        //    // TODO: check required fields, if valid call service to update Trade and return Trade list
-        //    return Redirect("/trade/list");
-        //}
-
-        //[HttpDelete("/trade/{id}")]
-        //public IActionResult DeleteTrade(int id)
-        //{
-        //    // TODO: Find Trade by Id and delete the Trade, return to Trade list
-        //    return Redirect("/trade/list");
-        //}
     }
 }

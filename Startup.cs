@@ -10,6 +10,10 @@ using Microsoft.OpenApi.Models;
 using WebApi3;
 using WebApi3.Repositories;
 using Serilog;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.Collections.Generic;
 
 namespace Dot.Net.WebApi
 {
@@ -26,6 +30,53 @@ namespace Dot.Net.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            //Add service for Swagger
+            services.AddSwaggerGen();
+
+            services.AddSwaggerGen(options =>
+            {
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Name = "Authorization",
+                    Description = "Bearer Authetication with JWT token",
+                    Type = SecuritySchemeType.Http
+                });
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Id = "Bearer",
+                                Type = ReferenceType.SecurityScheme
+                            }
+                        },
+                        new List<string>()
+                    }
+                });
+            });
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateActor = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["Jwt:Issuer"],
+                    ValidAudience = Configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
+                };
+            });
+
+            services.AddAuthorization();
+
             services.AddMvc(options =>
             {
                 options.Filters.Add(new ValidationFilter());
@@ -46,20 +97,7 @@ namespace Dot.Net.WebApi
 
 
             services.AddDbContext<LocalDbContext>(options =>
-                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            //Add service for Swagger
-            services.AddSwaggerGen();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo
-                {
-                    Version = "v1",
-                    Title = "Implement Swagger UI",
-                    Description = "A simple example to Implement Swagger UI",
-                });
-            });
-
+                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,6 +106,8 @@ namespace Dot.Net.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Showing API v1"));                   
             }
 
             app.UseHttpsRedirection();
@@ -76,6 +116,8 @@ namespace Dot.Net.WebApi
             app.UseSerilogRequestLogging();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -88,7 +130,7 @@ namespace Dot.Net.WebApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Showing API v1");
-            });
+            });            
         }
     }
 }

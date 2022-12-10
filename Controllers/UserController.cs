@@ -1,13 +1,16 @@
 using System;
 using System.Globalization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Dot.Net.WebApi.Controllers
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("[controller]")]
     public class UserController : Controller
     {

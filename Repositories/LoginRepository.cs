@@ -1,9 +1,7 @@
 ﻿using Dot.Net.WebApi.Data;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web.Helpers;
+using WebApi3.Domain;
 
 namespace WebApi3.Repositories
 {
@@ -14,28 +12,32 @@ namespace WebApi3.Repositories
         {
             _context = context;
         }
+
         /// <summary>
         /// Method that check if a User exists in the database and can access the API
         /// </summary>
         /// <param name="userName"></param>
         /// <param name="password"></param>
-        /// <returns></returns>
-        public bool Login(string userName, string password)
+        /// <returns></returns>    
+        public User Login(string userName, string password)
         {
             // get a UserName and Password from the user and compare them to User info from the database 
             var user = _context.Users.SingleOrDefault(u => u.UserName == userName);
+
             if (user == null)
             {
-                return false;
-            }
-            var hashedPassword = user.Password;
-            var IsPasswordCorrect = Crypto.VerifyHashedPassword(hashedPassword, password);
-            if (!IsPasswordCorrect)
-            {
-                return false;
+                return null;
             }
 
-            return true;
+            var hashedPassword = user.Password;
+            var IsPasswordCorrect = Crypto.VerifyHashedPassword(hashedPassword, password);
+
+            if (!IsPasswordCorrect)
+            {
+                return null;
+            }
+
+            return user;
         }
     }
 }

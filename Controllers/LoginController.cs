@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using System;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.Extensions.Logging;
+using System.Globalization;
 
 namespace Dot.Net.WebApi.Controllers
 {
@@ -15,11 +17,13 @@ namespace Dot.Net.WebApi.Controllers
     {
         public IConfiguration _configuration;
         private readonly ILoginRepository _loginRepository;
+        private readonly ILogger<LoginController> _logger;
 
-        public LoginController(IConfiguration config, ILoginRepository loginRepository)
+        public LoginController(IConfiguration config, ILoginRepository loginRepository, ILogger<LoginController> logger)
         {
             _configuration = config;
             _loginRepository = loginRepository;
+            _logger = logger;
         }
 
         [HttpPost("/login")]
@@ -55,6 +59,8 @@ namespace Dot.Net.WebApi.Controllers
                 );
 
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+                _logger.LogInformation("{User} Logged in on {Date} at {Time}", loggedInUser.UserName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
                 return Ok(tokenString);
                 //return Ok("Access granted.");

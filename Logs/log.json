@@ -1,7 +1,161 @@
-{"Timestamp":"2022-12-11T12:35:15.1198432+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Sunday, December 11, 2022","Time":"11:35:15 AM","MachineName":"DESKTOP-PASCREA","ProcessId":35828,"ThreadId":1}}
-{"Timestamp":"2022-12-11T12:42:00.2652214+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Sunday, December 11, 2022","Time":"11:42:00 AM","MachineName":"DESKTOP-PASCREA","ProcessId":34140,"ThreadId":1}}
-{"Timestamp":"2022-12-11T12:42:32.8647546+01:00","Level":"Information","MessageTemplate":"{User} Logged in on {Date} at {Time}","Properties":{"User":"Lucky","Date":"Sunday, December 11, 2022","Time":"11:42:32 AM","SourceContext":"Dot.Net.WebApi.Controllers.LoginController","ActionId":"48be8e06-048e-4f19-880b-010e0639fcd3","ActionName":"Dot.Net.WebApi.Controllers.LoginController.Login (WebApi3)","RequestId":"0HMMRDIRT8G9S:00000003","RequestPath":"/login","SpanId":"|e1d6887e-4079ff5aa90fefe9.","TraceId":"e1d6887e-4079ff5aa90fefe9","ParentId":"","ConnectionId":"0HMMRDIRT8G9S","MachineName":"DESKTOP-PASCREA","ProcessId":34140,"ThreadId":13}}
-{"Timestamp":"2022-12-11T12:43:08.1574978+01:00","Level":"Information","MessageTemplate":"User requested the list of BidList on {Date} at {Time}","Properties":{"Date":"Sunday, December 11, 2022","Time":"11:43:08 AM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"2e76016b-b40a-444e-bf64-24ffda62a2b7","ActionName":"Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)","RequestId":"0HMMRDIRT8G9S:00000005","RequestPath":"/bidList/list","SpanId":"|e1d68880-4079ff5aa90fefe9.","TraceId":"e1d68880-4079ff5aa90fefe9","ParentId":"","ConnectionId":"0HMMRDIRT8G9S","MachineName":"DESKTOP-PASCREA","ProcessId":34140,"ThreadId":8}}
-{"Timestamp":"2022-12-11T12:43:37.8564923+01:00","Level":"Information","MessageTemplate":"User requested the BidList with Id = {Id} on {Date} at {Time}","Properties":{"Id":1,"Date":"Sunday, December 11, 2022","Time":"11:43:37 AM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"c6bd9d82-9635-40b7-a05f-c658a7894d44","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMRDIRT8G9S:00000006","RequestPath":"/bidList/1","SpanId":"|e1d68881-4079ff5aa90fefe9.","TraceId":"e1d68881-4079ff5aa90fefe9","ParentId":"","ConnectionId":"0HMMRDIRT8G9S","MachineName":"DESKTOP-PASCREA","ProcessId":34140,"ThreadId":18}}
-{"Timestamp":"2022-12-11T12:43:37.8816665+01:00","Level":"Error","MessageTemplate":"No BidList with Id = {Id} was found. User was advised to enter a valid Id.","Properties":{"Id":1,"SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"c6bd9d82-9635-40b7-a05f-c658a7894d44","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMRDIRT8G9S:00000006","RequestPath":"/bidList/1","SpanId":"|e1d68881-4079ff5aa90fefe9.","TraceId":"e1d68881-4079ff5aa90fefe9","ParentId":"","ConnectionId":"0HMMRDIRT8G9S","MachineName":"DESKTOP-PASCREA","ProcessId":34140,"ThreadId":18}}
-{"Timestamp":"2022-12-11T12:43:51.4980111+01:00","Level":"Information","MessageTemplate":"User requested the BidList with Id = {Id} on {Date} at {Time}","Properties":{"Id":2,"Date":"Sunday, December 11, 2022","Time":"11:43:51 AM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"c6bd9d82-9635-40b7-a05f-c658a7894d44","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMRDIRT8G9S:00000007","RequestPath":"/bidList/2","SpanId":"|e1d68882-4079ff5aa90fefe9.","TraceId":"e1d68882-4079ff5aa90fefe9","ParentId":"","ConnectionId":"0HMMRDIRT8G9S","MachineName":"DESKTOP-PASCREA","ProcessId":34140,"ThreadId":17}}
+{
+  "Timestamp": "2022-12-11T12:35:15.1198432+01:00",
+  "Level": "Warning",
+  "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+  "Properties": {
+    "Date": "Sunday, December 11, 2022",
+    "Time": "11:35:15 AM",
+    "MachineName": "DESKTOP-PASCREA",
+    "ProcessId": 35828,
+    "ThreadId": 1
+  }
+} {
+  "Timestamp": "2022-12-11T12:42:00.2652214+01:00",
+  "Level": "Warning",
+  "MessageTemplate": "Application Starting Up on {Date} at {Time}",
+  "Properties": {
+    "Date": "Sunday, December 11, 2022",
+    "Time": "11:42:00 AM",
+    "MachineName": "DESKTOP-PASCREA",
+    "ProcessId": 34140,
+    "ThreadId": 1
+  }
+} {
+  "Timestamp": "2022-12-11T12:42:32.8647546+01:00",
+  "Level": "Information",
+  "MessageTemplate": "{User} Logged in on {Date} at {Time}",
+  "Properties": {
+    "User": "Lucky",
+    "Date": "Sunday, December 11, 2022",
+    "Time": "11:42:32 AM",
+    "SourceContext": "Dot.Net.WebApi.Controllers.LoginController",
+    "ActionId": "48be8e06-048e-4f19-880b-010e0639fcd3",
+    "ActionName": "Dot.Net.WebApi.Controllers.LoginController.Login (WebApi3)",
+    "RequestId": "0HMMRDIRT8G9S:00000003",
+    "RequestPath": "/login",
+    "SpanId": "|e1d6887e-4079ff5aa90fefe9.",
+    "TraceId": "e1d6887e-4079ff5aa90fefe9",
+    "ParentId": "",
+    "ConnectionId": "0HMMRDIRT8G9S",
+    "MachineName": "DESKTOP-PASCREA",
+    "ProcessId": 34140,
+    "ThreadId": 13
+  }
+} {
+  "Timestamp": "2022-12-11T12:43:08.1574978+01:00",
+  "Level": "Information",
+  "MessageTemplate": "User requested the list of BidList on {Date} at {Time}",
+  "Properties": {
+    "Date": "Sunday, December 11, 2022",
+    "Time": "11:43:08 AM",
+    "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+    "ActionId": "2e76016b-b40a-444e-bf64-24ffda62a2b7",
+    "ActionName": "Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)",
+    "RequestId": "0HMMRDIRT8G9S:00000005",
+    "RequestPath": "/bidList/list",
+    "SpanId": "|e1d68880-4079ff5aa90fefe9.",
+    "TraceId": "e1d68880-4079ff5aa90fefe9",
+    "ParentId": "",
+    "ConnectionId": "0HMMRDIRT8G9S",
+    "MachineName": "DESKTOP-PASCREA",
+    "ProcessId": 34140,
+    "ThreadId": 8
+  }
+} {
+  "Timestamp": "2022-12-11T12:43:37.8564923+01:00",
+  "Level": "Information",
+  "MessageTemplate": "User requested the BidList with Id = {Id} on {Date} at {Time}",
+  "Properties": {
+    "Id": 1,
+    "Date": "Sunday, December 11, 2022",
+    "Time": "11:43:37 AM",
+    "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+    "ActionId": "c6bd9d82-9635-40b7-a05f-c658a7894d44",
+    "ActionName": "Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)",
+    "RequestId": "0HMMRDIRT8G9S:00000006",
+    "RequestPath": "/bidList/1",
+    "SpanId": "|e1d68881-4079ff5aa90fefe9.",
+    "TraceId": "e1d68881-4079ff5aa90fefe9",
+    "ParentId": "",
+    "ConnectionId": "0HMMRDIRT8G9S",
+    "MachineName": "DESKTOP-PASCREA",
+    "ProcessId": 34140,
+    "ThreadId": 18
+  }
+} {
+  "Timestamp": "2022-12-11T12:43:37.8816665+01:00",
+  "Level": "Error",
+  "MessageTemplate": "No BidList with Id = {Id} was found. User was advised to enter a valid Id.",
+  "Properties": {
+    "Id": 1,
+    "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+    "ActionId": "c6bd9d82-9635-40b7-a05f-c658a7894d44",
+    "ActionName": "Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)",
+    "RequestId": "0HMMRDIRT8G9S:00000006",
+    "RequestPath": "/bidList/1",
+    "SpanId": "|e1d68881-4079ff5aa90fefe9.",
+    "TraceId": "e1d68881-4079ff5aa90fefe9",
+    "ParentId": "",
+    "ConnectionId": "0HMMRDIRT8G9S",
+    "MachineName": "DESKTOP-PASCREA",
+    "ProcessId": 34140,
+    "ThreadId": 18
+  }
+} {
+  "Timestamp": "2022-12-11T12:43:51.4980111+01:00",
+  "Level": "Information",
+  "MessageTemplate": "User requested the BidList with Id = {Id} on {Date} at {Time}",
+  "Properties": {
+    "Id": 2,
+    "Date": "Sunday, December 11, 2022",
+    "Time": "11:43:51 AM",
+    "SourceContext": "Dot.Net.WebApi.Controllers.BidListController",
+    "ActionId": "c6bd9d82-9635-40b7-a05f-c658a7894d44",
+    "ActionName": "Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)",
+    "RequestId": "0HMMRDIRT8G9S:00000007",
+    "RequestPath": "/bidList/2",
+    "SpanId": "|e1d68882-4079ff5aa90fefe9.",
+    "TraceId": "e1d68882-4079ff5aa90fefe9",
+    "ParentId": "",
+    "ConnectionId": "0HMMRDIRT8G9S",
+    "MachineName": "DESKTOP-PASCREA",
+    "ProcessId": 34140,
+    "ThreadId": 17
+  }
+}
+{"Timestamp":"2022-12-16T08:40:06.0857507+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"7:40:06 AM","MachineName":"DESKTOP-PASCREA","ProcessId":24240,"ThreadId":1}}
+{"Timestamp":"2022-12-16T08:42:13.2353575+01:00","Level":"Information","MessageTemplate":"{User} Logged in on {Date} at {Time}","Properties":{"User":"tintin","Date":"Friday, December 16, 2022","Time":"7:42:13 AM","SourceContext":"Dot.Net.WebApi.Controllers.LoginController","ActionId":"4ad8b486-8ee1-48b4-ae3c-0e0127a9d50d","ActionName":"Dot.Net.WebApi.Controllers.LoginController.Login (WebApi3)","RequestId":"0HMMV730GP44R:00000004","RequestPath":"/login","SpanId":"|3ac8fe55-4db7fe1d05c22d0f.","TraceId":"3ac8fe55-4db7fe1d05c22d0f","ParentId":"","ConnectionId":"0HMMV730GP44R","MachineName":"DESKTOP-PASCREA","ProcessId":24240,"ThreadId":15}}
+{"Timestamp":"2022-12-16T08:42:44.7293417+01:00","Level":"Information","MessageTemplate":"User requested the list of Trades on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"7:42:44 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"34b6d9f7-20c7-4752-b42e-a942e66b94a1","ActionName":"Dot.Net.WebApi.Controllers.TradeController.Home (WebApi3)","RequestId":"0HMMV730GP44R:00000005","RequestPath":"/trade/list","SpanId":"|3ac8fe56-4db7fe1d05c22d0f.","TraceId":"3ac8fe56-4db7fe1d05c22d0f","ParentId":"","ConnectionId":"0HMMV730GP44R","MachineName":"DESKTOP-PASCREA","ProcessId":24240,"ThreadId":19}}
+{"Timestamp":"2022-12-16T08:46:05.8036443+01:00","Level":"Information","MessageTemplate":"User requested the Trade with Id = {Id} on {Date} at {Time}","Properties":{"Id":1,"Date":"Friday, December 16, 2022","Time":"7:46:05 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"8f6bd785-9f16-4f31-827c-677c39dbe654","ActionName":"Dot.Net.WebApi.Controllers.TradeController.GetSpecificTrade (WebApi3)","RequestId":"0HMMV730GP44R:00000006","RequestPath":"/trade/1","SpanId":"|3ac8fe57-4db7fe1d05c22d0f.","TraceId":"3ac8fe57-4db7fe1d05c22d0f","ParentId":"","ConnectionId":"0HMMV730GP44R","MachineName":"DESKTOP-PASCREA","ProcessId":24240,"ThreadId":27}}
+{"Timestamp":"2022-12-16T08:46:48.7568536+01:00","Level":"Information","MessageTemplate":"User requested the Trade with Id = {Id} on {Date} at {Time}","Properties":{"Id":10,"Date":"Friday, December 16, 2022","Time":"7:46:48 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"8f6bd785-9f16-4f31-827c-677c39dbe654","ActionName":"Dot.Net.WebApi.Controllers.TradeController.GetSpecificTrade (WebApi3)","RequestId":"0HMMV730GP44R:00000007","RequestPath":"/trade/10","SpanId":"|3ac8fe58-4db7fe1d05c22d0f.","TraceId":"3ac8fe58-4db7fe1d05c22d0f","ParentId":"","ConnectionId":"0HMMV730GP44R","MachineName":"DESKTOP-PASCREA","ProcessId":24240,"ThreadId":31}}
+{"Timestamp":"2022-12-16T08:46:48.7658110+01:00","Level":"Error","MessageTemplate":"No Trade with Id = {Id} was found. User was advised to enter a valid Id.","Properties":{"Id":10,"SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"8f6bd785-9f16-4f31-827c-677c39dbe654","ActionName":"Dot.Net.WebApi.Controllers.TradeController.GetSpecificTrade (WebApi3)","RequestId":"0HMMV730GP44R:00000007","RequestPath":"/trade/10","SpanId":"|3ac8fe58-4db7fe1d05c22d0f.","TraceId":"3ac8fe58-4db7fe1d05c22d0f","ParentId":"","ConnectionId":"0HMMV730GP44R","MachineName":"DESKTOP-PASCREA","ProcessId":24240,"ThreadId":31}}
+{"Timestamp":"2022-12-16T08:47:28.0825675+01:00","Level":"Information","MessageTemplate":"User created a new Trade on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"7:47:28 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"f24dab23-e363-4ea2-a191-33d9c5556e91","ActionName":"Dot.Net.WebApi.Controllers.TradeController.AddTrade (WebApi3)","RequestId":"0HMMV730GP44R:00000008","RequestPath":"/trade/add","SpanId":"|3ac8fe59-4db7fe1d05c22d0f.","TraceId":"3ac8fe59-4db7fe1d05c22d0f","ParentId":"","ConnectionId":"0HMMV730GP44R","MachineName":"DESKTOP-PASCREA","ProcessId":24240,"ThreadId":33}}
+{"Timestamp":"2022-12-16T08:58:03.0987879+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"7:58:03 AM","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":1}}
+{"Timestamp":"2022-12-16T08:58:37.7174452+01:00","Level":"Information","MessageTemplate":"{User} Logged in on {Date} at {Time}","Properties":{"User":"newUser","Date":"Friday, December 16, 2022","Time":"7:58:37 AM","SourceContext":"Dot.Net.WebApi.Controllers.LoginController","ActionId":"2b38ceb8-3e61-4c26-9c62-7c65e1986617","ActionName":"Dot.Net.WebApi.Controllers.LoginController.Login (WebApi3)","RequestId":"0HMMV7D1BN7JO:00000003","RequestPath":"/login","SpanId":"|e6930d9b-4ec872edbde937c3.","TraceId":"e6930d9b-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JO","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":4}}
+{"Timestamp":"2022-12-16T08:58:59.3655605+01:00","Level":"Information","MessageTemplate":"User requested the list of Trades on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"7:58:59 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"aeee1542-5d10-4012-93d7-7f66009d644c","ActionName":"Dot.Net.WebApi.Controllers.TradeController.Home (WebApi3)","RequestId":"0HMMV7D1BN7JO:00000004","RequestPath":"/trade/list","SpanId":"|e6930d9c-4ec872edbde937c3.","TraceId":"e6930d9c-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JO","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":9}}
+{"Timestamp":"2022-12-16T09:05:00.7913611+01:00","Level":"Information","MessageTemplate":"User created a new Trade on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"8:05:00 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"4c2cbf90-9abe-435b-ac66-68073d0e49cf","ActionName":"Dot.Net.WebApi.Controllers.TradeController.AddTrade (WebApi3)","RequestId":"0HMMV7D1BN7JQ:00000001","RequestPath":"/trade/add","SpanId":"|e6930da0-4ec872edbde937c3.","TraceId":"e6930da0-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JQ","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":17}}
+{"Timestamp":"2022-12-16T09:10:13.3726002+01:00","Level":"Information","MessageTemplate":"User updated the Trade with Id = {Id} on {Date} at {Time}","Properties":{"Id":2011,"Date":"Friday, December 16, 2022","Time":"8:10:13 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"1ff89e93-e665-4de5-831b-f777e330ad10","ActionName":"Dot.Net.WebApi.Controllers.TradeController.UpdateTrade (WebApi3)","RequestId":"0HMMV7D1BN7JQ:00000006","RequestPath":"/trade/update/2011","SpanId":"|e6930da5-4ec872edbde937c3.","TraceId":"e6930da5-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JQ","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":25}}
+{"Timestamp":"2022-12-16T09:13:28.3331598+01:00","Level":"Information","MessageTemplate":"User created a new Trade on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"8:13:28 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"4c2cbf90-9abe-435b-ac66-68073d0e49cf","ActionName":"Dot.Net.WebApi.Controllers.TradeController.AddTrade (WebApi3)","RequestId":"0HMMV7D1BN7JQ:0000000B","RequestPath":"/trade/add","SpanId":"|e6930daa-4ec872edbde937c3.","TraceId":"e6930daa-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JQ","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":25}}
+{"Timestamp":"2022-12-16T09:13:44.3365607+01:00","Level":"Information","MessageTemplate":"User requested to delete the Trade with Id = {Id} on {Date} at {Time}","Properties":{"Id":3013,"Date":"Friday, December 16, 2022","Time":"8:13:44 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"a8e2d76e-f7f6-4c55-a164-e0a2c646b8d2","ActionName":"Dot.Net.WebApi.Controllers.TradeController.DeleteTrade (WebApi3)","RequestId":"0HMMV7D1BN7JQ:0000000C","RequestPath":"/trade/delete/3013","SpanId":"|e6930dab-4ec872edbde937c3.","TraceId":"e6930dab-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JQ","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":25}}
+{"Timestamp":"2022-12-16T09:13:44.3403900+01:00","Level":"Error","MessageTemplate":"No Trade with Id = {Id} was found. User was advised to enter a valid Id.","Properties":{"Id":3013,"SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"a8e2d76e-f7f6-4c55-a164-e0a2c646b8d2","ActionName":"Dot.Net.WebApi.Controllers.TradeController.DeleteTrade (WebApi3)","RequestId":"0HMMV7D1BN7JQ:0000000C","RequestPath":"/trade/delete/3013","SpanId":"|e6930dab-4ec872edbde937c3.","TraceId":"e6930dab-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JQ","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":25}}
+{"Timestamp":"2022-12-16T09:13:50.0595569+01:00","Level":"Information","MessageTemplate":"User deleted the Trade with Id = {Id} on {Date} at {Time}","Properties":{"Id":3012,"Date":"Friday, December 16, 2022","Time":"8:13:50 AM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"a8e2d76e-f7f6-4c55-a164-e0a2c646b8d2","ActionName":"Dot.Net.WebApi.Controllers.TradeController.DeleteTrade (WebApi3)","RequestId":"0HMMV7D1BN7JQ:0000000D","RequestPath":"/trade/delete/3012","SpanId":"|e6930dac-4ec872edbde937c3.","TraceId":"e6930dac-4ec872edbde937c3","ParentId":"","ConnectionId":"0HMMV7D1BN7JQ","MachineName":"DESKTOP-PASCREA","ProcessId":4652,"ThreadId":35}}
+{"Timestamp":"2022-12-16T09:43:11.8988008+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"8:43:11 AM","MachineName":"DESKTOP-PASCREA","ProcessId":14880,"ThreadId":1}}
+{"Timestamp":"2022-12-16T09:44:46.7270552+01:00","Level":"Information","MessageTemplate":"{User} Logged in on {Date} at {Time}","Properties":{"User":"tintin","Date":"Friday, December 16, 2022","Time":"8:44:46 AM","SourceContext":"Dot.Net.WebApi.Controllers.LoginController","ActionId":"dc6853d4-f2b2-46b5-a1c1-4ee6a0d55d7d","ActionName":"Dot.Net.WebApi.Controllers.LoginController.Login (WebApi3)","RequestId":"0HMMV868K63Q9:00000004","RequestPath":"/login","SpanId":"|42f6fa21-4b39bc322ed3ff4b.","TraceId":"42f6fa21-4b39bc322ed3ff4b","ParentId":"","ConnectionId":"0HMMV868K63Q9","MachineName":"DESKTOP-PASCREA","ProcessId":14880,"ThreadId":9}}
+{"Timestamp":"2022-12-16T14:34:30.4092186+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:34:30 PM","MachineName":"DESKTOP-PASCREA","ProcessId":29800,"ThreadId":1}}
+{"Timestamp":"2022-12-16T14:40:04.6471167+01:00","Level":"Warning","MessageTemplate":"Application Starting Up on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:40:04 PM","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":1}}
+{"Timestamp":"2022-12-16T14:40:39.2304711+01:00","Level":"Information","MessageTemplate":"User created a new User on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:40:39 PM","SourceContext":"Dot.Net.WebApi.Controllers.UserController","ActionId":"b0007da4-4b54-46a4-a3ef-ff4019e6e318","ActionName":"Dot.Net.WebApi.Controllers.UserController.AddUser (WebApi3)","RequestId":"0HMMVDC57CLKI:00000003","RequestPath":"/user/add","SpanId":"|8ea7e9cc-40d2b83dee86fdf3.","TraceId":"8ea7e9cc-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":9}}
+{"Timestamp":"2022-12-16T14:41:21.9851055+01:00","Level":"Information","MessageTemplate":"User created a new User on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:41:21 PM","SourceContext":"Dot.Net.WebApi.Controllers.UserController","ActionId":"b0007da4-4b54-46a4-a3ef-ff4019e6e318","ActionName":"Dot.Net.WebApi.Controllers.UserController.AddUser (WebApi3)","RequestId":"0HMMVDC57CLKI:00000004","RequestPath":"/user/add","SpanId":"|8ea7e9cd-40d2b83dee86fdf3.","TraceId":"8ea7e9cd-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":14}}
+{"Timestamp":"2022-12-16T14:41:57.6280110+01:00","Level":"Information","MessageTemplate":"User created a new User on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:41:57 PM","SourceContext":"Dot.Net.WebApi.Controllers.UserController","ActionId":"b0007da4-4b54-46a4-a3ef-ff4019e6e318","ActionName":"Dot.Net.WebApi.Controllers.UserController.AddUser (WebApi3)","RequestId":"0HMMVDC57CLKI:00000005","RequestPath":"/user/add","SpanId":"|8ea7e9ce-40d2b83dee86fdf3.","TraceId":"8ea7e9ce-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":14}}
+{"Timestamp":"2022-12-16T14:42:58.2356252+01:00","Level":"Information","MessageTemplate":"{User} Logged in on {Date} at {Time}","Properties":{"User":"Lucky","Date":"Friday, December 16, 2022","Time":"1:42:58 PM","SourceContext":"Dot.Net.WebApi.Controllers.LoginController","ActionId":"33bb2192-7fbb-4925-baed-dae8f511c5ab","ActionName":"Dot.Net.WebApi.Controllers.LoginController.Login (WebApi3)","RequestId":"0HMMVDC57CLKI:00000006","RequestPath":"/login","SpanId":"|8ea7e9cf-40d2b83dee86fdf3.","TraceId":"8ea7e9cf-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":13}}
+{"Timestamp":"2022-12-16T14:43:15.7244638+01:00","Level":"Information","MessageTemplate":"User requested the list of BidList on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:43:15 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"ba48a407-d0a2-434d-b7ab-876e19b127a7","ActionName":"Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)","RequestId":"0HMMVDC57CLKI:00000007","RequestPath":"/bidList/list","SpanId":"|8ea7e9d0-40d2b83dee86fdf3.","TraceId":"8ea7e9d0-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":13}}
+{"Timestamp":"2022-12-16T14:43:44.5561807+01:00","Level":"Information","MessageTemplate":"User created a new BidList on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:43:44 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"93d34793-b05f-49c8-afb5-6bc7a3426422","ActionName":"Dot.Net.WebApi.Controllers.BidListController.AddBidList (WebApi3)","RequestId":"0HMMVDC57CLKI:00000008","RequestPath":"/bidList/add","SpanId":"|8ea7e9d1-40d2b83dee86fdf3.","TraceId":"8ea7e9d1-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":21}}
+{"Timestamp":"2022-12-16T14:44:12.6492242+01:00","Level":"Information","MessageTemplate":"User created a new BidList on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:44:12 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"93d34793-b05f-49c8-afb5-6bc7a3426422","ActionName":"Dot.Net.WebApi.Controllers.BidListController.AddBidList (WebApi3)","RequestId":"0HMMVDC57CLKI:00000009","RequestPath":"/bidList/add","SpanId":"|8ea7e9d2-40d2b83dee86fdf3.","TraceId":"8ea7e9d2-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":23}}
+{"Timestamp":"2022-12-16T14:44:24.4412193+01:00","Level":"Information","MessageTemplate":"User requested the list of BidList on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:44:24 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"ba48a407-d0a2-434d-b7ab-876e19b127a7","ActionName":"Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)","RequestId":"0HMMVDC57CLKI:0000000A","RequestPath":"/bidList/list","SpanId":"|8ea7e9d3-40d2b83dee86fdf3.","TraceId":"8ea7e9d3-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":22}}
+{"Timestamp":"2022-12-16T14:44:32.3344399+01:00","Level":"Information","MessageTemplate":"User requested the BidList with Id = {Id} on {Date} at {Time}","Properties":{"Id":1,"Date":"Friday, December 16, 2022","Time":"1:44:32 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"13ed3a3f-cbbe-46a0-be5e-af43b0af052d","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMVDC57CLKI:0000000B","RequestPath":"/bidList/1","SpanId":"|8ea7e9d4-40d2b83dee86fdf3.","TraceId":"8ea7e9d4-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":22}}
+{"Timestamp":"2022-12-16T14:44:37.2712606+01:00","Level":"Information","MessageTemplate":"User requested the BidList with Id = {Id} on {Date} at {Time}","Properties":{"Id":3,"Date":"Friday, December 16, 2022","Time":"1:44:37 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"13ed3a3f-cbbe-46a0-be5e-af43b0af052d","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMVDC57CLKI:0000000C","RequestPath":"/bidList/3","SpanId":"|8ea7e9d5-40d2b83dee86fdf3.","TraceId":"8ea7e9d5-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":23}}
+{"Timestamp":"2022-12-16T14:44:37.2799450+01:00","Level":"Error","MessageTemplate":"No BidList with Id = {Id} was found. User was advised to enter a valid Id.","Properties":{"Id":3,"SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"13ed3a3f-cbbe-46a0-be5e-af43b0af052d","ActionName":"Dot.Net.WebApi.Controllers.BidListController.GetSpecificBidList (WebApi3)","RequestId":"0HMMVDC57CLKI:0000000C","RequestPath":"/bidList/3","SpanId":"|8ea7e9d5-40d2b83dee86fdf3.","TraceId":"8ea7e9d5-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":23}}
+{"Timestamp":"2022-12-16T14:48:25.2423044+01:00","Level":"Information","MessageTemplate":"User created a new Trade on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:48:25 PM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"0e48cb40-ddee-42d5-bd97-deccaab6632a","ActionName":"Dot.Net.WebApi.Controllers.TradeController.AddTrade (WebApi3)","RequestId":"0HMMVDC57CLKI:0000000D","RequestPath":"/trade/add","SpanId":"|8ea7e9d6-40d2b83dee86fdf3.","TraceId":"8ea7e9d6-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":23}}
+{"Timestamp":"2022-12-16T14:48:57.9647256+01:00","Level":"Information","MessageTemplate":"User created a new Trade on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:48:57 PM","SourceContext":"Dot.Net.WebApi.Controllers.TradeController","ActionId":"0e48cb40-ddee-42d5-bd97-deccaab6632a","ActionName":"Dot.Net.WebApi.Controllers.TradeController.AddTrade (WebApi3)","RequestId":"0HMMVDC57CLKI:0000000E","RequestPath":"/trade/add","SpanId":"|8ea7e9d7-40d2b83dee86fdf3.","TraceId":"8ea7e9d7-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":30}}
+{"Timestamp":"2022-12-16T14:49:45.1906711+01:00","Level":"Information","MessageTemplate":"User created a new RuleName on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:49:45 PM","SourceContext":"Dot.Net.WebApi.Controllers.RuleNameController","ActionId":"ac4ba561-0d84-42f0-8571-40c8cb9b50ac","ActionName":"Dot.Net.WebApi.Controllers.RuleNameController.AddRuleName (WebApi3)","RequestId":"0HMMVDC57CLKI:0000000F","RequestPath":"/ruleName/add","SpanId":"|8ea7e9d8-40d2b83dee86fdf3.","TraceId":"8ea7e9d8-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":34}}
+{"Timestamp":"2022-12-16T14:50:13.0390079+01:00","Level":"Information","MessageTemplate":"User created a new RuleName on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:50:13 PM","SourceContext":"Dot.Net.WebApi.Controllers.RuleNameController","ActionId":"ac4ba561-0d84-42f0-8571-40c8cb9b50ac","ActionName":"Dot.Net.WebApi.Controllers.RuleNameController.AddRuleName (WebApi3)","RequestId":"0HMMVDC57CLKI:00000010","RequestPath":"/ruleName/add","SpanId":"|8ea7e9d9-40d2b83dee86fdf3.","TraceId":"8ea7e9d9-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKI","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":31}}
+{"Timestamp":"2022-12-16T14:56:32.0945303+01:00","Level":"Information","MessageTemplate":"User requested the list of BidList on {Date} at {Time}","Properties":{"Date":"Friday, December 16, 2022","Time":"1:56:32 PM","SourceContext":"Dot.Net.WebApi.Controllers.BidListController","ActionId":"ba48a407-d0a2-434d-b7ab-876e19b127a7","ActionName":"Dot.Net.WebApi.Controllers.BidListController.Home (WebApi3)","RequestId":"0HMMVDC57CLKK:00000001","RequestPath":"/bidList/list","SpanId":"|8ea7e9da-40d2b83dee86fdf3.","TraceId":"8ea7e9da-40d2b83dee86fdf3","ParentId":"","ConnectionId":"0HMMVDC57CLKK","MachineName":"DESKTOP-PASCREA","ProcessId":28172,"ThreadId":22}}

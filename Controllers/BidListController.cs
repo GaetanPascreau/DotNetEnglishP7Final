@@ -79,7 +79,7 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult AddBidList([FromBody] BidListDTO bidListDTO)
         {
             var result = _bidListRepository.CreateBidList(bidListDTO);
-            // If the BidList wasn't validated by the service, return a Bad Request error
+            // If the BidList wasn't validated, return a Bad Request error
             if (result is null)
             {
                 return BadRequest();
@@ -98,7 +98,7 @@ namespace Dot.Net.WebApi.Controllers
         [HttpPut("/bidList/update/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult UpdateCurvePoint(int id, [FromBody] BidListDTO bidListDTO)
+        public IActionResult UpdateBidList(int id, [FromBody] BidListDTO bidListDTO)
         {
             if (id != bidListDTO.BidListId)
             {
@@ -136,5 +136,7 @@ namespace Dot.Net.WebApi.Controllers
             _logger.LogInformation("User deleted the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
+
+        //Add a method to get the JWT token then return back the UserNAme
     }
 }

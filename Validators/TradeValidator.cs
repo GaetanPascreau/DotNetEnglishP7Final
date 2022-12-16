@@ -12,6 +12,7 @@ namespace WebApi3.Validators
             RuleFor(t => t.Account).NotNull().WithMessage("Account is mandatory");
             RuleFor(t => t.Type).NotEmpty().WithMessage("Type is mandatory");
             RuleFor(t => t.Type).NotNull().WithMessage("Type is mandatory");
+            RuleFor(t => t.Type).Must(t => t == "buy" || t == "sell").WithMessage("Type must be Buy or Sell");
 
             RuleFor(t => t.BuyQuantity).GetType().Equals(typeof(decimal));
             RuleFor(t => t.BuyQuantity).NotEmpty().WithMessage("You are buying. BuyQuantity is mandatory").When(t => t.Type == "buy");

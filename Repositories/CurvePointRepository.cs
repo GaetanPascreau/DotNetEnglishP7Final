@@ -34,7 +34,7 @@ namespace WebApi3.Repositories
 
         /// <summary>
         /// Method that GETs a specific CurvePoint by its Id from the database,
-        /// then converts it into a list of CurvePointDTO (showing less properties)
+        /// then converts it into a CurvePointDTO (showing less properties)
         /// then returning it (to the Service)
         /// </summary>
         /// <param name="id"></param>

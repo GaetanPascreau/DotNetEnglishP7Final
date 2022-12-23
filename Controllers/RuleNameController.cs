@@ -10,7 +10,7 @@ using WebApi3.Repositories;
 
 namespace Dot.Net.WebApi.Controllers
 {
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "Administartor")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] 
     [Route("[controller]")]
     public class RuleNameController : Controller
     {
@@ -31,7 +31,7 @@ namespace Dot.Net.WebApi.Controllers
         [HttpGet("/ruleName/list")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Home()
+        public IActionResult GetAllRuleNames()
         {
             // Add Logs with date/time in US standard
             _logger.LogInformation("User requested the list of RuleNames on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -73,7 +73,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to add a RuleName if the data is valid
         /// </summary>
-        /// <param name="ruleName"></param>
+        /// <param name="ruleNameDTO"></param>
         /// <returns></returns>
         [HttpPost("/ruleName/add")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -120,7 +120,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to delete a given RuleName, identified by its id
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("/ruleName/delete/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]

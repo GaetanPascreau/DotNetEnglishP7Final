@@ -34,7 +34,7 @@ namespace WebApi3.Repositories
 
         /// <summary>
         /// Method that GETs a specific Trade by its Id from the database,
-        /// then converts it into a list of TradeDTO (showing less properties)
+        /// then converts it into a TradeDTO (showing less properties)
         /// then returning it (to the Service)
         /// </summary>
         /// <param name="id"></param>
@@ -84,7 +84,7 @@ namespace WebApi3.Repositories
         /// <summary>
         /// Method that UPDATEs a Trade with a given Id in the database
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <param name="tradeDTO"></param>
         /// <returns></returns>
         public async Task<TradeDTO> UpdateTrade(int id, TradeDTO tradeDTO)

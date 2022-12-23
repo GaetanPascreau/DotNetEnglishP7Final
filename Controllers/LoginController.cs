@@ -26,6 +26,12 @@ namespace Dot.Net.WebApi.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Method for a user to login to the API
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         [HttpPost("/login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]

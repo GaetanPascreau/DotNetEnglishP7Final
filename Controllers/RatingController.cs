@@ -30,7 +30,7 @@ namespace Dot.Net.WebApi.Controllers
         [HttpGet("/rating/list")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Home()
+        public IActionResult GetAllRatings()
         {
             // Add Logs with date/time in US standard
             _logger.LogInformation("User requested the list of Ratings on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -42,8 +42,8 @@ namespace Dot.Net.WebApi.Controllers
             {
                 _logger.LogError("There is no Rating to display.");
                 return NotFound("No Rating to display.");
-            }
-            
+            }   
+
             return Ok(result.Result);
         }
 
@@ -119,7 +119,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to delete a given Rating, identified by its id
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("/rating/delete/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]

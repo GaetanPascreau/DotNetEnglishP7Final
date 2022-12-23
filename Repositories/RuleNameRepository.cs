@@ -33,7 +33,7 @@ namespace WebApi3.Repositories
 
         /// <summary>
         /// Method that GETs a specific RuleName by its Id from the database,
-        /// then converts it into a list of RuleNameDTO (showing less properties)
+        /// then converts it into a RuleNameDTO (showing less properties)
         /// then returning it (to the Service)
         /// </summary>
         /// <param name="id"></param>
@@ -76,7 +76,7 @@ namespace WebApi3.Repositories
         /// <summary>
         /// Method that UPDATEs a RuleName with a given Id in the database
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <param name="ruleNameDTO"></param>
         /// <returns></returns>
         public async Task<RuleNameDTO> UpdateRuleName(int id, RuleNameDTO ruleNameDTO)

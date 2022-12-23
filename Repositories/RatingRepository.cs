@@ -1,8 +1,6 @@
 ﻿using Dot.Net.WebApi.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using WebApi3.Domain;
 
@@ -75,7 +73,7 @@ namespace WebApi3.Repositories
         /// <summary>
         /// Method that UPDATEs a Rating with a given Id in the database
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <param name="rating"></param>
         /// <returns></returns>
         public async Task<Rating> UpdateRating(int id, Rating rating)

@@ -32,7 +32,7 @@ namespace Dot.Net.WebApi.Controllers
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Home()
+        public IActionResult GetAllUsers()
         {
             // Add Logs with date/time in US standard
             _logger.LogInformation("User requested the list of Users on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -75,7 +75,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to display a single User, identified by its UserName
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="userName"></param>
         /// <returns></returns>
         [HttpGet("/userByUserName/")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -98,7 +98,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to add a User if the data is valid
         /// </summary>
-        /// <param name="usern"></param>
+        /// <param name="userDTO"></param>
         /// <returns></returns>
         [HttpPost("/user/add")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -146,7 +146,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to delete a given User, identified by its id
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("/user/delete/{id}")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]

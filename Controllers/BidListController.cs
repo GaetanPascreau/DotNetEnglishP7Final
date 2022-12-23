@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Globalization;
-using WebApi3.Domain;
 using WebApi3.Domain.DTO;
 using WebApi3.Repositories;
 
@@ -31,7 +30,7 @@ namespace Dot.Net.WebApi.Controllers
         [HttpGet("/bidList/list")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Home()
+        public IActionResult GetAllBidLists()
         {
             // Add Logs with date/time in US standard
             _logger.LogInformation("User requested the list of BidList on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -73,7 +72,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to add a BidList if the data is valid
         /// </summary>
-        /// <param name="bidList"></param>
+        /// <param name="bidListDTO"></param>
         /// <returns></returns>
         [HttpPost("/bidList/add")]
         public IActionResult AddBidList([FromBody] BidListDTO bidListDTO)
@@ -118,7 +117,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to delete a given BidList, identified by its id
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("/bidList/delete/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]

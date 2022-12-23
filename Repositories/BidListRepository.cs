@@ -34,7 +34,7 @@ namespace WebApi3.Repositories
 
         /// <summary>
         /// Method that GETs a specific BidList by its Id from the database,
-        /// then converts it into a list of BidListDTO (showing less properties)
+        /// then converts it into a BidListDTO (showing less properties)
         /// then returning it (to the Service)
         /// </summary>
         /// <param name="id"></param>
@@ -53,7 +53,7 @@ namespace WebApi3.Repositories
         /// <summary>
         /// Method that CREATEs a BidList and save it to the database
         /// </summary>
-        /// <param name="biListDTO"></param>
+        /// <param name="bidListDTO"></param>
         /// <returns></returns>
         public async Task<List<BidListDTO>> CreateBidList(BidListDTO bidListDTO)
         {

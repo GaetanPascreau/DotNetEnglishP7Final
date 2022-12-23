@@ -30,7 +30,7 @@ namespace Dot.Net.WebApi.Controllers
         [HttpGet("/curvePoint/list")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public IActionResult Home()
+        public IActionResult GetAllCurvePoints()
         {
             // Add Logs with date/time in US standard
             _logger.LogInformation("User requested the list of CurvePoints on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -72,7 +72,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <summary>
         /// Method to add a CurvePoint if the data is valid
         /// </summary>
-        /// <param name="curvePoint"></param>
+        /// <param name="curvePointDTO"></param>
         /// <returns></returns>
         [HttpPost("/curvePoint/add")]
         public IActionResult AddCurvePoint([FromBody]CurvePointDTO curvePointDTO)

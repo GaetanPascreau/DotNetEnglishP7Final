@@ -1,7 +1,4 @@
-﻿using ServiceStack.FluentValidation.Attributes;
-using System;
-using System.ComponentModel.DataAnnotations;
-using WebApi3.Validators;
+﻿using System;
 
 namespace WebApi3.Domain.DTO
 {

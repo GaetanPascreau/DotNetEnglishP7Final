@@ -34,7 +34,7 @@ namespace WebApi3.Repositories
 
         /// <summary>
         /// Method that GETs a specific User by its Id from the database,
-        /// then converts it into a list of UserDTO (showing less properties)
+        /// then converts it into a UserDTO (showing less properties)
         /// then returning it (to the Service)
         /// </summary>
         /// <param name="id"></param>
@@ -52,7 +52,7 @@ namespace WebApi3.Repositories
 
         /// <summary>
         /// Method that GETs a specific User by its UserName from the database,
-        /// then converts it into a list of UserDTO (showing less properties)
+        /// then converts it into a UserDTO (showing less properties)
         /// then returning it (to the Service)
         /// </summary>
         /// <param name="userName"></param>
@@ -106,7 +106,7 @@ namespace WebApi3.Repositories
         /// <summary>
         /// Method that UPDATEs a User with a given Id in the database
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <param name="userDTO"></param>
         /// <returns></returns>
         public async Task<UserDTO> UpdateUser(int id, UserDTO userDTO)

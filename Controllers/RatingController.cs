@@ -63,7 +63,7 @@ namespace Dot.Net.WebApi.Controllers
             if (result.Result == null)
             {
                 _logger.LogError("No Rating with Id = {Id} was found. User was advised to enter a valid Id.", id);
-                return NotFound("Rating not found. Please enter an valid Id.");
+                return NotFound("Rating not found. Please enter a valid Id.");
             }
 
             return Ok(result.Result);

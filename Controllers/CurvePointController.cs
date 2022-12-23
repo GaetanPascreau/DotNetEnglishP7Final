@@ -63,7 +63,7 @@ namespace Dot.Net.WebApi.Controllers
             if (result.Result == null)
             {
                 _logger.LogError("No CurvePoint with Id = {Id} was found. User was advised to enter a valid Id.", id);
-                return NotFound("CurvePoint not found. Enter an valid Id.");
+                return NotFound("CurvePoint not found. Please enter a valid Id.");
             }
             
             return Ok(result.Result);

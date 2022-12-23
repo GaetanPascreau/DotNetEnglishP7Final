@@ -64,7 +64,7 @@ namespace Dot.Net.WebApi.Controllers
             if (result.Result == null)
             {
                 _logger.LogError("No Trade with Id = {Id} was found. User was advised to enter a valid Id.", id);
-                return NotFound("Trade not found. Enter an valid Id.");
+                return NotFound("Trade not found. Please enter a valid Id.");
             }
 
             return Ok(result.Result);

@@ -64,7 +64,7 @@ namespace Dot.Net.WebApi.Controllers
             if (result.Result == null)
             {
                 _logger.LogError("No User with Id = {Id} was found. User was advised to enter a valid Id.", id);
-                return NotFound("User not found. Enter an valid Id.");
+                return NotFound("User not found. Please enter a valid Id.");
             }
 
             return Ok(result.Result);
@@ -86,7 +86,7 @@ namespace Dot.Net.WebApi.Controllers
             if (result.Result == null)
             {
                 _logger.LogError("No User with UserName {UserName} was found. User was advised to enter a valid UserName.", userName);
-                return NotFound("User not found. Enter an valid UserName.");
+                return NotFound("User not found. Please enter a valid UserName.");
             }
 
             return Ok(result.Result);

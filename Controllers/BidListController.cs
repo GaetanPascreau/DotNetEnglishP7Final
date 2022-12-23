@@ -64,7 +64,7 @@ namespace Dot.Net.WebApi.Controllers
             if (result.Result == null)
             {
                 _logger.LogError("No BidList with Id = {Id} was found. User was advised to enter a valid Id.", id);
-                return NotFound("BidList not found. Enter an valid Id.");
+                return NotFound("BidList not found. Please enter a valid Id.");
             }
 
             return Ok(result.Result);
@@ -130,13 +130,11 @@ namespace Dot.Net.WebApi.Controllers
             {
                 _logger.LogInformation("User requested to delete the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
                 _logger.LogError("No BidList with Id = {Id} was found. User was advised to enter a valid Id.", id);
-                return NotFound("BidList not found. Please enter a vlid Id.");
+                return NotFound("BidList not found. Please enter a valid Id.");
             }
 
             _logger.LogInformation("User deleted the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
-
-        //Add a method to get the JWT token then return back the UserNAme
     }
 }

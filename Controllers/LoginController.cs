@@ -51,7 +51,7 @@ namespace Dot.Net.WebApi.Controllers
                     issuer: _configuration["Jwt:Issuer"], 
                     audience: _configuration["Jwt:Audience"],
                     claims: claims,
-                    expires: DateTime.UtcNow.AddMinutes(15),
+                    expires: DateTime.UtcNow.AddMinutes(60),
                     notBefore: DateTime.UtcNow,
                     signingCredentials: new SigningCredentials(
                         new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"])),
@@ -63,7 +63,6 @@ namespace Dot.Net.WebApi.Controllers
                 _logger.LogInformation("{User} Logged in on {Date} at {Time}", loggedInUser.UserName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
                 return Ok(tokenString);
-                //return Ok("Access granted.");
             }
 
             return BadRequest("Please enter a UserName and a Password");

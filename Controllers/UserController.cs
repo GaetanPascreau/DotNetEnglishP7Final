@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace Dot.Net.WebApi.Controllers
 {
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    
     [Route("[controller]")]
     public class UserController : Controller
     {
@@ -29,6 +29,7 @@ namespace Dot.Net.WebApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("/user/list")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult Home()
@@ -54,6 +55,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("/user/{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificUser(int id)
@@ -76,6 +78,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("/userByUserName/")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificUserByUserName(string userName)
@@ -120,6 +123,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="userDTO"></param>
         /// <returns></returns>
         [HttpPut("/user/update/{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public IActionResult UpdateUser(int id, [FromBody] UserDTO userDTO)
@@ -145,6 +149,7 @@ namespace Dot.Net.WebApi.Controllers
         /// <param name="Id"></param>
         /// <returns></returns>
         [HttpDelete("/user/delete/{id}")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult DeleteUser(int id)

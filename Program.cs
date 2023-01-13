@@ -11,17 +11,17 @@ namespace Dot.Net.WebApi
     {
         public static void Main(string[] args)
         {
-            // Add Logging right from the start, by adding the appsettings.json file ( where serilog is configured) to the configuration at build time.
+            // Add Logging right from the start, by adding the appsettings.json file ( where Serilog is configured) to the configuration at build time.
             var configuration = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            // Create the (serilog) logger using the configuration from above.
+            // Create the (Serilog) logger using the configuration from above.
             Log.Logger = new LoggerConfiguration()
                 .ReadFrom.Configuration(configuration)
                 .CreateLogger();
 
-            // Add a wrap around the application starter and add a first log using serilog logger.
+            // Add a wrap around the application starter and add a first log using Serilog logger.
             try
             {
                 Log.Warning("Application Starting Up on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
@@ -40,7 +40,7 @@ namespace Dot.Net.WebApi
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                //Use serilog instead of the built-in logging system
+                //Use Serilog instead of the built-in logging system
                 .UseSerilog()
                 //// The commented code below is just in case we want to use the built in .NetCore logging system, and have a control on its configuration.
                 //.ConfigureLogging((context, logging) =>

@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Collections.Generic;
+using FluentValidation;
 
 namespace Dot.Net.WebApi
 {
@@ -42,7 +43,7 @@ namespace Dot.Net.WebApi
                     BearerFormat = "JWT",
                     In = ParameterLocation.Header,
                     Name = "Authorization",
-                    Description = "Bearer Authetication with JWT token",
+                    Description = "Bearer Authentication with JWT token",
                     Type = SecuritySchemeType.Http
                 });
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement
@@ -77,14 +78,25 @@ namespace Dot.Net.WebApi
 
             services.AddAuthorization();
 
+            // The following methods are obsolete and where replaced by the methods below
+            //services.AddMvc(options =>
+            //{
+            //    options.Filters.Add(new ValidationFilter());
+            //})
+            //.AddFluentValidation(options =>
+            //{
+            //    options.RegisterValidatorsFromAssemblyContaining<Startup>();
+            //});
+
             services.AddMvc(options =>
             {
                 options.Filters.Add(new ValidationFilter());
-            })
-            .AddFluentValidation(options =>
-            {
-                options.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
+
+            services.AddFluentValidationAutoValidation();
+            services.AddFluentValidationClientsideAdapters();
+            services.AddValidatorsFromAssemblyContaining<Startup>();
+
 
             //Add services for Repositories and LocalDbContext
             services.AddScoped<ICurvePointRepository, CurvePointRepository>();

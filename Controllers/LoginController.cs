@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Logging;
 using System.Globalization;
+using WebApi3.Domain.DTO;
 
 namespace Dot.Net.WebApi.Controllers
 {
@@ -27,19 +28,18 @@ namespace Dot.Net.WebApi.Controllers
         }
 
         /// <summary>
-        /// Method for a user to login to the API
+        /// Login using a DTO
         /// </summary>
-        /// <param name="userName"></param>
-        /// <param name="password"></param>
+        /// <param name="loginDTO"></param>
         /// <returns></returns>
         [HttpPost("/login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public IActionResult Login(string userName, string password)
+        public IActionResult Login([FromBody] LoginDTO loginDTO)
         {
-            if (!string.IsNullOrEmpty(userName) && !string.IsNullOrEmpty(password))
+            if (!string.IsNullOrEmpty(loginDTO.UserName) && !string.IsNullOrEmpty(loginDTO.Password))
             {
-                var loggedInUser = _loginRepository.Login(userName, password);
+                var loggedInUser = _loginRepository.Login(loginDTO.UserName, loginDTO.Password);
 
                 if (loggedInUser == null)
                 {

@@ -24,7 +24,7 @@ namespace Dot.Net.WebApi
             // Add a wrap around the application starter and add a first log using Serilog logger.
             try
             {
-                Log.Warning("Application Starting Up on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                Log.Warning("Application Starting Up on {Date} at {Time} (UTC)", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
                 CreateHostBuilder(args).Build().Run();
             }
             catch (Exception ex)

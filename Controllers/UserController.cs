@@ -35,7 +35,7 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult GetAllUsers()
         {
             // Add Logs with date/time in US standard
-            _logger.LogInformation("User requested the list of Users on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the list of Users on {Date} at {Time} (UTC)", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             // Add Logs with date/time in French standard
             //_logger.LogInformation("User requested the list of Users on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
 
@@ -60,7 +60,7 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificUser(int id)
         {
-            _logger.LogInformation("User requested the User with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the User with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
             var result = _userRepository.GetSingleUser(id);
             if (result.Result == null)
@@ -83,7 +83,7 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificUserByUserName(string userName)
         {
-            _logger.LogInformation("User requested the User with UserName {UserName} on {Date} at {Time}", userName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the User with UserName {UserName} on {Date} at {Time} (UTC)", userName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
             var result = _userRepository.GetSingleUserByUserName(userName);
             if (result.Result == null)
@@ -112,7 +112,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("UserName or FullName is already used");
             }
 
-            _logger.LogInformation("User created a new User on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User created a new User on {Date} at {Time} (UTC)", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -139,7 +139,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("User not found.");
             }
 
-            _logger.LogInformation("User updated the User with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User updated the User with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -157,12 +157,12 @@ namespace Dot.Net.WebApi.Controllers
             var result = _userRepository.DeleteUser(id);
             if (result.Result == null)
             {
-                _logger.LogInformation("User requested to delete the User with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogInformation("User requested to delete the User with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
                 _logger.LogError("No User with Id = {Id} was found. User was advised to enter a valid Id.", id);
                 return NotFound("User not found.");
             }
 
-            _logger.LogInformation("User deleted the User with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User deleted the User with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
     }

@@ -34,7 +34,7 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult GetAllRuleNames()
         {
             // Add Logs with date/time in US standard
-            _logger.LogInformation("User requested the list of RuleNames on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the list of RuleNames on {Date} at {Time} (UTC)", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             // Add Logs with date/time in French standard
             //_logger.LogInformation("User requested the list of CurvePoints on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
 
@@ -58,7 +58,7 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificRuleName(int id)
         {
-            _logger.LogInformation("User requested the RuleName with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the RuleName with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
             var result = _ruleNameRepository.GetSingleRuleName(id);
             if (result.Result == null)
@@ -87,7 +87,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest(result.Result);
             }
 
-            _logger.LogInformation("User created a new RuleName on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User created a new RuleName on {Date} at {Time} (UTC)", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -113,7 +113,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("RuleName not found.");
             }
 
-            _logger.LogInformation("User updated the RuleName with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User updated the RuleName with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -130,12 +130,12 @@ namespace Dot.Net.WebApi.Controllers
             var result = _ruleNameRepository.DeleteRuleName(id);
             if (result.Result == null)
             {
-                _logger.LogInformation("User requested to delete the RuleName with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogInformation("User requested to delete the RuleName with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
                 _logger.LogError("No RuleName with Id = {Id} was found. User was advised to enter a valid Id.", id);
                 return NotFound("Rulename not found.");
             }
 
-            _logger.LogInformation("User deleted the RuleName with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User deleted the RuleName with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
     }

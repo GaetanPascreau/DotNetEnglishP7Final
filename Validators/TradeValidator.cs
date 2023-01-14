@@ -7,7 +7,7 @@ namespace WebApi3.Validators
     {
         public TradeValidator()
         {
-            //This can be a buy OR a sell, so the quantity/price fields should accept Null or empty, but only if the corresponding type wasn't selected
+            //The trade type can be a buy OR a sell, so the quantity/price fields should accept Null or empty, but only if the corresponding type wasn't selected
             RuleFor(t => t.Account).NotEmpty().WithMessage("Account is mandatory");
             RuleFor(t => t.Account).NotNull().WithMessage("Account is mandatory");
             RuleFor(t => t.Type).NotEmpty().WithMessage("Type is mandatory");

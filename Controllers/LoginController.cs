@@ -66,7 +66,7 @@ namespace Dot.Net.WebApi.Controllers
 
                 var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
-                _logger.LogInformation("{User} Logged in on {Date} at {Time}", loggedInUser.UserName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogInformation("{User} Logged in on {Date} at {Time} (UTC)", loggedInUser.UserName, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
                 return Ok(tokenString);
             }

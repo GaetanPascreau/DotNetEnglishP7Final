@@ -33,7 +33,7 @@ namespace Dot.Net.WebApi.Controllers
         public IActionResult GetAllBidLists()
         {
             // Add Logs with date/time in US standard
-            _logger.LogInformation("User requested the list of BidList on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the list of BidList on {Date} at {Time} (UTC)", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             // Add Logs with date/time in French standard
             //_logger.LogInformation("User requested the list of BidList on {Date} {Time}", DateTime.UtcNow.ToLongDateString(), DateTime.UtcNow.ToLongTimeString());
             
@@ -57,7 +57,7 @@ namespace Dot.Net.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public IActionResult GetSpecificBidList(int id)
         {
-            _logger.LogInformation("User requested the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User requested the BidList with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
 
             var result = _bidListRepository.GetSingleBidList(id);
             if (result.Result == null)
@@ -84,7 +84,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest();
             }
 
-            _logger.LogInformation("User created a new BidList on {Date} at {Time}", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User created a new BidList on {Date} at {Time} (UTC)", DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -110,7 +110,7 @@ namespace Dot.Net.WebApi.Controllers
                 return BadRequest("BidList not found.");
             }
 
-            _logger.LogInformation("User updated the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User updated the BidList with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
 
@@ -127,12 +127,12 @@ namespace Dot.Net.WebApi.Controllers
             var result = _bidListRepository.DeleteBidList(id);
             if (result.Result == null)
             {
-                _logger.LogInformation("User requested to delete the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+                _logger.LogInformation("User requested to delete the BidList with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
                 _logger.LogError("No BidList with Id = {Id} was found. User was advised to enter a valid Id.", id);
                 return NotFound("BidList not found. Please enter a valid Id.");
             }
 
-            _logger.LogInformation("User deleted the BidList with Id = {Id} on {Date} at {Time}", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
+            _logger.LogInformation("User deleted the BidList with Id = {Id} on {Date} at {Time} (UTC)", id, DateTime.UtcNow.ToString("dddd, MMMM d, yyyy", CultureInfo.InvariantCulture), DateTime.UtcNow.ToString("h:mm:ss tt", CultureInfo.InvariantCulture));
             return Ok(result.Result);
         }
     }
